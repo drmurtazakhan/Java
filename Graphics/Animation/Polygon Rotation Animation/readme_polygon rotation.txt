@@ -1,0 +1,1 @@
+These Java code examples show the rotation animation of polygon
