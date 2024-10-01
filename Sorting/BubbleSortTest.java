@@ -19,8 +19,19 @@ class BubbleSort
 				}
 			} 
 		}
+	}	   	
+} 
+
+public class BubbleSortTest
+{
+	public static void main(String[] args)
+	{
+		int[] a = randomIntArray(10, 100);
+		print(a);
+		BubbleSort.sort(a);
+		print(a);
 	}
-	
+
    public static int[] randomIntArray(int length, int n) {
       int[] a = new int[length];
       Random generator = new Random();
@@ -31,19 +42,9 @@ class BubbleSort
       return a;
    }	
 	
-    public static void printArray(int[] a) {
+    public static void print(int[] a) {
         for (int i = 0; i < a.length; i++)
             System.out.print(a[i] + " ");
         System.out.println();
     }	
-} 
-public class BubbleSortTest
-{
-	public static void main(String[] args)
-	{
-		int[] a = BubbleSort.randomIntArray(10, 100);
-		BubbleSort.printArray(a);
-		BubbleSort.sort(a);
-		BubbleSort.printArray(a);
-	}
 }
