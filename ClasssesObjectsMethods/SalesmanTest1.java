@@ -1,0 +1,108 @@
+import java.io.*;
+class Salesman 
+{	
+	private String name;
+	private double salary;
+	private double monthlySale;
+	private double commission;
+	private double netIncome;
+		
+	public Salesman(String hisName, double hisSalary, double hisSale)
+	{
+		name=hisName;
+		salary=hisSalary;
+		monthlySale=hisSale;
+		commission=computeCommission();
+		netIncome=computeNetIncome();				
+	}
+	
+	public double computeCommission()
+	{
+		double comm;
+		if (monthlySale>=15000)
+		comm = monthlySale*(20.0/100.0);
+		else if (monthlySale>=10000)
+		comm = monthlySale*(15.0/100.0);				
+		else if (monthlySale>=8000)
+		comm = monthlySale*(10.0/100.0);				
+		else if (monthlySale>=5000)
+		comm = monthlySale*(5.0/100.0);				
+		else
+		comm=0;
+		
+		return comm;
+	}	
+	public double computeNetIncome()
+	{
+		double net_Income;
+		net_Income=salary+computeCommission();
+		return net_Income;
+	}
+	
+	public static void displayAllRecords(Salesman[] sman)
+	{		
+		System.out.println("----------------------------------------------------");
+		for (int i=0; i<sman.length; i++)
+    	{
+    		System.out.println(sman[i].name+"\t"+sman[i].salary+"\t"+sman[i].monthlySale+"\t"+sman[i].commission+"\t"+sman[i].netIncome);
+    	}
+    	System.out.println("----------------------------------------------------");
+		
+	}
+	public void displayOneRecord()
+	{
+		System.out.println("Name :"+name);
+		System.out.println("Salary :"+salary);
+		System.out.println("Monthly :"+monthlySale);
+		System.out.println("Commission :"+commission);
+		System.out.println("NetIncome :"+netIncome);
+	}
+	public static int MaxIncomeSalesman(Salesman[] sman)
+	{
+		int hisIndex=0;
+		double maxIncome=sman[hisIndex].netIncome;
+		for (int i=1; i<sman.length; i++)
+		{
+			if (sman[i].netIncome >=maxIncome)
+			{
+				hisIndex=i;
+				maxIncome=sman[hisIndex].netIncome;
+			}
+		}		
+		return hisIndex;
+	}	
+}
+public class SalesmanTest1
+{
+	public static void main(String[] args) throws IOException
+	{		    
+		InputStreamReader reader = new InputStreamReader(System.in);
+		BufferedReader stdin = new BufferedReader(reader);
+		
+		System.out.print("Enter number of records: ");
+        int size = Integer.parseInt(stdin.readLine());
+        Salesman[] salemen = new Salesman[size];
+		
+		for (int i=0; i<salemen.length; i++)
+    	{
+    		System.out.print("Enter Name of salesman: ");
+    		String salesmanName=stdin.readLine();
+    		
+    		System.out.print("Enter Salary of salesman: ");
+    		double salesmanSalary=Double.parseDouble(stdin.readLine());
+    		
+    		System.out.print("Enter monthly Sale of salesman: ");
+    		double salesmanSale=Double.parseDouble(stdin.readLine());
+    		
+    		Salesman s =new Salesman(salesmanName,salesmanSalary,salesmanSale); // object
+    		salemen[i] =s; // salemen array store the reference of objects    		
+    	}
+    	Salesman.displayAllRecords(salemen);
+    	int maxIndex=Salesman.MaxIncomeSalesman(salemen);
+    	System.out.println("=========================================");
+    	System.out.println("Record of Saleman with Maximum Net Income ");
+    	salemen[maxIndex].displayOneRecord();
+	}
+}
+
+ 

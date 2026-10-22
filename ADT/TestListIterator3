@@ -1,0 +1,22 @@
+import java.util.*;
+
+public class TestListIterator2
+{
+	public static void main(String[] args)
+	{
+		LinkedList  list = new LinkedList();
+		
+		ListIterator iter = list.listIterator();
+		
+		for(int i = 0; i < 6; i++)
+			iter.add(new Integer(i));
+			
+		ListIterator iter1 = list.listIterator();
+		ListIterator iter2 = list.listIterator();
+		iter1.next();				// skip the first element
+		iter1.remove();
+		iter2.next();				// throws ConcurrentModificationException
+			
+		System.out.println(list);
+	}
+}

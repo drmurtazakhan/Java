@@ -1,0 +1,2 @@
+"E:\\Program Files\\Xinox Software\\JCreator\\MyProjects\\ArithmeticOperations\\Arithmetic.java"
+"E:\\Program Files\\Xinox Software\\JCreator\\MyProjects\\ArithmeticOperations\\ArithmeticOperations.java"

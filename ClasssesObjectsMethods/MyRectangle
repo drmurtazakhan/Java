@@ -1,0 +1,20 @@
+import java.awt.Rectangle;
+public class MyRectangle
+{
+	private int x,y,w,h; // instance variables
+			
+	public static void main (String[] args)
+	{
+		Rectangle r1 = new Rectangle(10,20,100,50);
+		System.out.println(r1);
+		
+		r1.translate(20,10);
+		
+		
+	}
+	public void translate(int x_unit,int y_unit) // Method to translate rectangle object
+	{
+		x=x+x_unit;
+		y=y+y_unit;
+	}
+}

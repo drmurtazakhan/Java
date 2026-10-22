@@ -1,0 +1,6 @@
+Cay Hortsmann#Computing Concepts with Java
+Nell Dale#Introduction to Java and Software Design
+Buruno Press#Data Structures and Alogrithms
+Randy Kobes#Professional Perl Develpmnet
+Cay Hortsmann#Core Java
+Mark Weiss#Data Structures and Problem Solving

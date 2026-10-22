@@ -1,0 +1,12 @@
+1	Click was a specialist on Toyota
+2	Clack was a specialist on Honda, while
+3	Joe was good at handling Caprice Classic
+1	Click was a specialist on Toyota
+2	Clack was a specialist on Honda, while
+3	Joe was good at handling Caprice Classic
+Click was a specialist on Toyota
+Clack was a specialist on Honda, while
+Joe was good at handling Caprice Classic
+Click was a specialist on Toyota
+Clack was a specialist on Honda, while
+Joe was good at handling Caprice Classic
