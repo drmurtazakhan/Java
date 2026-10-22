@@ -1,0 +1,123 @@
+import java.io.*;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.geom.*;
+import java.text.DecimalFormat;
+
+public class BresenhamLineFloat extends JApplet {
+  public static void main(String s[]) {
+    JFrame frame = new JFrame();
+    frame.setTitle("Transformation: Translate");
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    JApplet applet = new BresenhamLineFloat();
+    applet.init();
+    frame.getContentPane().add(applet);
+    frame.pack();
+    frame.setVisible(true);
+  }
+  
+  public void init() {
+    JPanel panel = new MyPanel();
+    getContentPane().add(panel);
+  }
+}
+
+class MyPanel extends JPanel {
+	private static final int FRM_WIDTH = 400;
+	private static final int FRM_HEIGHT =400;
+	private static final double REC_WIDTH = 80;
+	private static final double REC_HEIGHT = 60;
+	private static final double MID_X=(FRM_WIDTH-REC_WIDTH)/2;
+	private static final double MID_Y=(FRM_HEIGHT-REC_HEIGHT)/2;
+	
+  public MyPanel() {
+    setPreferredSize(new Dimension(FRM_WIDTH, FRM_HEIGHT));
+    this.setBackground(Color.white);
+  }
+
+
+// Copied from Section 4.1 of
+//    Ammeraal, L. and K. Zhang (2007). Computer Graphics for Java Programmers, 2nd Edition,
+//       Chichester: John Wiley.
+void putPixel(Graphics g, int x, int y)
+{  g.drawLine(x, y, x, y);
+}
+
+void drawLine1(Graphics g, int xP, int yP, int xQ, int yQ)
+{  int x = xP, y = yP;
+   float d = 0, m = (float)(yQ - yP)/(float)(xQ - xP);
+   
+   DecimalFormat formater = new DecimalFormat("0.0000");
+   
+   System.out.println("m="+m);
+   System.out.println();
+   System.out.println("d"+"\t\t"+"x"+"\t"+"y");
+   System.out.println("---------------");
+   //System.out.println(d+"\t\t"+x+"\t"+y);
+
+   for (;;)
+   {  putPixel(g, x, y);
+	  System.out.println(formater.format(d)+"\t"+x+"\t"+y);	
+      if (x == xQ) break;
+      x++;
+      d=d+m; ////d + = m;
+      if (d >= 0.5)
+      	{
+      		y++;
+      		d--;
+      		//System.out.println("d >= 0.5");
+      	}
+      
+      //System.out.println(formater.format(d)+"\t"+x+"\t"+y);
+
+   }
+}
+
+void drawLine(Graphics g, int xP, int yP, int xQ, int yQ) 
+{  int x = xP, y = yP, d = 0, dx = xQ - xP, dy = yQ - yP,
+      c, m, xInc = 1, yInc = 1;
+      
+   if (dx < 0){xInc = -1; dx = -dx;} 
+   if (dy < 0){yInc = -1; dy = -dy;}
+   
+   System.out.println("d"+"\t"+"x"+"\t"+"y");
+   System.out.println(d+"\t"+x+"\t"+y);
+   
+   if (dy <= dx)
+   {  c = 2 * dx; m = 2 * dy;
+      if (xInc < 0) dx++;
+      for (;;)
+      {  putPixel(g, x, y);
+         if (x == xQ) break;
+         x += xInc;
+         d += m;
+         if (d >= dx){y += yInc; d -= c;}
+         System.out.println(d+"\t"+x+"\t"+y);
+      }
+   }
+   else
+   {  c = 2 * dy; m = 2 * dx;
+      if (yInc < 0) dy++;
+      for (;;)
+      {  putPixel(g, x, y);
+         if (y == yQ) break;
+         y += yInc;
+         d += m;
+         if (d >= dy){x += xInc; d -= c;}
+         System.out.println(d+"\t"+x+"\t"+y);
+      }
+   }
+}
+
+  public void paintComponent(Graphics g) {
+    super.paintComponent(g);
+    Graphics2D g2 = (Graphics2D)g;    
+     int xP=2;
+     int yP=4;
+     int xQ=5;
+     int yQ=6;
+    drawLine1(g, xP, yP, xQ, yQ) ;
+   // drawLine(g, xP, yP, xQ, yQ) ;
+
+  }
+}

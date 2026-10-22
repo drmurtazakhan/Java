@@ -1,0 +1,1 @@
+These examples show how to move polygon using arrow keys
