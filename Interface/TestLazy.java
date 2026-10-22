@@ -1,0 +1,1 @@
+public class TestLazy {  public static void main(String[] args) {       Lazy ref1 = new Lazy();       ref1.wakeUp();  } // End of main() method  } // End of class TestLazy

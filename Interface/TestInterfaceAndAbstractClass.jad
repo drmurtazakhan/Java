@@ -1,0 +1,33 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 5/15/2003 1:14:10 AM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   TestInterfaceAndAbstractClass.java
+
+import java.io.PrintStream;
+
+public class TestInterfaceAndAbstractClass
+{
+
+    public TestInterfaceAndAbstractClass()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        String s = "Yahya Omar";
+        double d = 5000D;
+        double d1 = 1000D;
+        Manager manager = new Manager(s, d, d1);
+        double d2 = manager.netIncome();
+        double d3 = d2 * 12D;
+        double d4 = 40000D;
+        double d5 = manager.zakatDue(d3, d4);
+        System.out.println("Name: " + manager.getName());
+        System.out.println("Salary: " + manager.getSalary());
+        System.out.println("Bonus: " + d1);
+        System.out.println("Net Income: " + d2);
+        System.out.println("Annual Income: " + d3);
+        System.out.println("Annual Expenses: " + d4);
+        System.out.println("Zakat Due: " + d5);
+    }
+}
