@@ -1,0 +1,450 @@
+<!-- Page: ProblemsetProblemViewPage.ftl -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html><head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta name="X-Csrf-Token" content="3fb4fbecdhfde950caf7c98334a7368d">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="expires" content="-1">
+    <meta http-equiv="profileName" content="p1">
+    <meta name="google-site-verification" content="OTd2dN5x4nS4OPknPI9JFg36fKxjqY0i1PSfFPv_J90">
+    <meta property="fb:admins" content="100001352546622">
+    <meta property="og:image" content="/static/images/codeforces-vk-square-en.png">
+    <meta property="og:title" content="Problem - 286B - Codeforces">
+    <meta property="og:site_name" content="Codeforces">
+    
+    <meta name="cc" content="1dbneskwm2h0k">
+    
+    <meta name="verify-reformal" content="f56f99fd7e087fb6ccb48ef2">
+    <title>Problem - 286B - Codeforces</title>
+        <meta name="description" content="Codeforces. Programming competitions and contests, programming community">
+        <meta name="keywords" content="programming algorithm contest competition informatics olympiads c++ java graphs vkcup">
+    <meta name="robots" content="index, follow">
+
+    <link rel="stylesheet" href="Problem%20-%20286B%20-%20Codeforces_files/font-awesome.css" type="text/css" charset="utf-8">
+
+        <link href="Problem%20-%20286B%20-%20Codeforces_files/css.css" rel="stylesheet" type="text/css">
+
+
+    <link rel="shortcut icon" type="image/png" href="http://codeforces.com/static/favicon.png">
+
+    <!--CombineResourcesFilter-->
+    <link charset="utf-8" href="Problem%20-%20286B%20-%20Codeforces_files/532a51f3e21ab4661013f28aa2665e53_429c63982abfce9ee19b92499fd.css" rel="stylesheet" type="text/css">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        
+        
+        
+
+    <script src="Problem%20-%20286B%20-%20Codeforces_files/ga.js" async="" type="text/javascript"></script><script src="Problem%20-%20286B%20-%20Codeforces_files/89b3ee750b2212159cecc5edcdb53b8e_17d9f944603856db9fc173ec6e35.js" type="text/javascript"> </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--/CombineResourcesFilter-->
+
+    <link rel="stylesheet" href="Problem%20-%20286B%20-%20Codeforces_files/style.css" type="text/css" charset="utf-8">
+    <link rel="stylesheet" href="Problem%20-%20286B%20-%20Codeforces_files/style_002.css" type="text/css" charset="utf-8">
+
+    <script type="text/javascript" src="Problem%20-%20286B%20-%20Codeforces_files/share.js" charset="utf-8"></script>
+    
+    <script type="text/javascript" src="Problem%20-%20286B%20-%20Codeforces_files/jquery.js"></script>
+    <script type="text/javascript" src="Problem%20-%20286B%20-%20Codeforces_files/set.js"></script>
+
+    <!--[if IE]>
+    <style>
+        #sidebar {
+            padding-left: 1em;
+            margin: 1em 1em 1em 0;
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body><span style="display:none;" class="csrf-token" data-csrf="3fb4fbecdhfde950caf7c98334a7368d">&nbsp;</span>
+<div class="button-up" style="display: none; opacity: 0.7; width: 50px; height:100%; position: fixed; left: 0; top: 0; cursor: pointer; text-align: center; line-height: 30px; color: #d3dbe4; font-weight: bold; font-size: 30px;"><i class="icon-circle-arrow-up"></i></div>
+
+<!-- Codeforces JavaScripts. -->
+<script type="text/javascript">
+    if (window.parent.frames.length > 0) {
+        window.stop();
+    }
+</script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+    $.ajaxPrefilter(function(options, originalOptions, xhr) {
+        var csrf = Codeforces.getCsrfToken();
+
+        if (csrf) {
+            var data = originalOptions.data;
+            if (originalOptions.data !== undefined) {
+                if (Object.prototype.toString.call(originalOptions.data) === '[object String]') {
+                    data = $.deparam(originalOptions.data);
+                }
+            } else {
+                data = {};
+            }
+            options.data = $.param($.extend(data, { csrf_token: csrf }));
+        }
+    });
+
+    window.getCodeforcesServerTime = function(callback) {
+        $.post("/data/time", {}, callback, "json");
+    }
+
+    window.updateTypography = function () {
+        $("div.ttypography code").addClass("tt");
+        $("div.ttypography pre>code").addClass("prettyprint").removeClass("tt");
+        $("div.ttypography table").addClass("bordertable");
+        prettyPrint();
+    }
+
+    $.ajaxSetup({ scriptCharset: "utf-8" ,contentType: "application/x-www-form-urlencoded; charset=UTF-8", headers: {
+        'X-Csrf-Token': Codeforces.getCsrfToken()
+    }});
+
+    window.updateTypography();
+
+    Codeforces.signForms();
+
+    $(".second-level-menu-list").lavaLamp({
+        fx: "backout",
+        speed: 1000
+    });
+
+
+    Codeforces.countdown();
+    $("a[rel='photobox']").colorbox();
+
+
+        });
+    </script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-743380-5']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = (document.location.protocol == 'https:' ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+<div id="body">
+        <!-- Frame: Header.ftl -->
+<div id="header" style="position:relative;">
+    <div style="float:left;">
+            <a href="http://codeforces.com/"><img src="Problem%20-%20286B%20-%20Codeforces_files/codeforces-logo-with-telegram.png"></a>
+    </div>
+    <div class="lang-chooser">
+        <div style="text-align: right;">
+            <a href="http://codeforces.com/problemset/problem/286/B?locale=en"><img src="Problem%20-%20286B%20-%20Codeforces_files/gb.png" title="In English" alt="In English"></a>
+            <a href="http://codeforces.com/problemset/problem/286/B?locale=ru"><img src="Problem%20-%20286B%20-%20Codeforces_files/ru.png" title="По-русски" alt="По-русски"></a>
+        </div>
+        <div>
+                <a href="http://codeforces.com/enter">Enter</a>
+                 | 
+                <a href="http://codeforces.com/register">Register</a>
+                
+        </div>
+    </div>
+    <div style="font-size:0.8em;margin-top:0.25em;position:absolute;right:0;top:4.25em;">
+    </div>
+    <br style="clear: both;">
+</div>
+<!-- /Frame: Header.ftl -->
+        <!-- Frame: MainMenuFrame.ftl -->
+    <div class="roundbox menu-box" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+<div class="menu-list-container">
+    <ul class="menu-list main-menu-list">
+                <li class=""><a href="http://codeforces.com/">Home</a></li>
+                <li class=""><a href="http://codeforces.com/contests">Contests</a></li>
+                <li class=""><a href="http://codeforces.com/gyms">Gym</a></li>
+                <li class="current"><a href="http://codeforces.com/problemset">Problemset</a></li>
+                <li class=""><a href="http://codeforces.com/groups">Groups</a></li>
+                <li class=""><a href="http://codeforces.com/ratings">Rating</a></li>
+                <li class=""><a href="http://codeforces.com/api/help">API</a></li>
+                <li class=""><a href="http://codeforces.com/help">Help</a></li>
+                <li class=""><a href="http://codeforces.com/bayan2015">Bayan 2015 <img class="icon" src="Problem%20-%20286B%20-%20Codeforces_files/cup.png"></a></li>
+                <li class=""><a href="http://codeforces.com/rcc2014">RCC <img class="icon" src="Problem%20-%20286B%20-%20Codeforces_files/cup.png"></a></li>
+    </ul>
+    <form method="post" action="/search"><input name="csrf_token" value="3fb4fbecdhfde950caf7c98334a7368d" type="hidden">
+        <input class="search" name="query" data-isplaceholder="true" value="Search by tag">
+    <input name="_tta" value="208" type="hidden"></form>
+    <br style="clear: both;">
+</div>
+    </div>
+<!-- /Frame: MainMenuFrame.ftl -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("input.search").focus(function() {
+                if ($(this).attr("data-isPlaceholder") === "true") {
+                    $(this).val("");
+                    $(this).removeAttr("data-isPlaceholder");
+                }
+            });
+        });
+    </script>
+        <br style="height: 3em; clear: both;">
+        <div style="position: relative;">
+                    <div id="sidebar"><!-- Frame: ComplexFrame.ftl --><!-- Frame: ProblemExecutionFactorWarningSidebarFrame.ftl -->
+    <div class="roundbox highlight-blue sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ Attention
+            <div class="top-links">
+            </div>
+        </div>
+    <div style="margin: 1em">
+        Package for this problem was not updated by the problem writer 
+or Codeforces administration after we’ve upgraded the judging servers. 
+To adjust the time limit constraint, solution execution time will be 
+multiplied by 2. For example, if your solution works for 400 ms on 
+judging servers, than value 800 ms will be displayed and used to 
+determine the verdict.
+    </div>
+    </div>
+<!-- /Frame: ProblemExecutionFactorWarningSidebarFrame.ftl --><!-- Frame: ComplexFrame.ftl --><!-- Frame: ContestStateSidebarFrame.ftl -->
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <table class="rtable ">
+            <tbody>
+                <tr>
+                            <th class="left" style="width:100%;"><a style="color: black" href="http://codeforces.com/contest/286">Codeforces Round #176 (Div. 1)</a></th>
+                </tr>
+                    <tr>
+                                <td class="left bottom" colspan="1"><span class="contest-state-phase">Finished</span></td>
+                    </tr>
+            </tbody>
+        </table>
+    </div>
+<!-- /Frame: ContestStateSidebarFrame.ftl -->
+
+<!-- Frame: ProblemTagsFrame.ftl -->
+    <div class="roundbox sidebox" style="">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+        <div class="caption titled">→ Problem tags
+            <div class="top-links">
+            </div>
+        </div>
+<div style="padding: 0.5em;">
+    <div class="roundbox " style="margin:2px; padding:0 3px 2px 3px; background-color:#f0f0f0;float:left;">
+            <div class="roundbox-lt">&nbsp;</div>
+            <div class="roundbox-rt">&nbsp;</div>
+            <div class="roundbox-lb">&nbsp;</div>
+            <div class="roundbox-rb">&nbsp;</div>
+<span class="tag-box" style="font-size:12px;" title="Implementation problems, programming technics, simulation">
+    implementation
+</span>
+    </div>
+    <div style="clear:both;text-align:right;font-size:11px;">
+            <span title="Please login into the Codeforces" class="notice">No tag edit access</span>
+    </div>
+</div>
+    </div>
+
+<form id="addTagForm" action="/data/problemTags" method="post" style="display:none;"><input name="csrf_token" value="3fb4fbecdhfde950caf7c98334a7368d" type="hidden">
+    <input name="action" value="addTag" type="hidden">
+    <input name="problemId" value="2766" type="hidden">
+    <input name="tagName" value="" type="hidden">
+<input name="_tta" value="208" type="hidden"></form>
+
+<form id="removeTagForm" action="/data/problemTags" method="post" style="display:none;"><input name="csrf_token" value="3fb4fbecdhfde950caf7c98334a7368d" type="hidden">
+    <input name="action" value="removeTag" type="hidden">
+    <input name="problemId" value="2766" type="hidden">
+    <input name="tagName" value="" type="hidden">
+<input name="_tta" value="208" type="hidden"></form>
+
+<script type="text/javascript">
+    $(".tag-box img").click(function () {
+        var tagName = $(this).attr("value");
+        Codeforces.confirm("Are you sure you want to remove this tag?", function () {
+            $("#removeTagForm input[name=tagName]").val(tagName);
+            $("#removeTagForm").submit();
+        }, function () {
+        }, "Yes", "No");
+    });
+
+    $("#addTagLink").click(function () {
+        $(this).hide();
+        $("#addTagLabel").show();
+        return false;
+    });
+
+    $("#addTagSelect").change(function () {
+        var tagName = $(this).val();
+        if (tagName === "") {
+            $("#addTagLabel").hide();
+            $("#addTagLink").show();
+        } else {
+            $("#addTagForm input[name=tagName]").val(tagName);
+            $("#addTagForm").submit();
+        }
+    });
+</script>
+<!-- /Frame: ProblemTagsFrame.ftl --><!-- Frame: ContestResourcesSidebarFrame.ftl -->
+<style type="text/css">
+#new-resource-form tr td {
+padding-top: 0.5em;
+}
+#new-resource-form input:not([type="submit"]) {
+font-size: 0.8em;
+}
+#new-resource-form select {
+font-size: 0.8em;
+}
+</style>
+<div class="roundbox sidebox sidebar-menu" style="">
+<div class="roundbox-lt">&nbsp;</div>
+<div class="roundbox-rt">&nbsp;</div>
+<div class="caption titled">→ Contest materials
+<div class="top-links">
+</div>
+</div>
+<ul>
+<li>
+<span>
+<a href="http://codeforces.com/blog/entry/7104" title="Codeforces Round #176" target="_blank">Announcement</a>
+</span>
+<span style="float: right;">
+<img class="delete-resource-link" resourceid="1571" resourcename="Codeforces Round #176" resourcemanual="true" src="Problem%20-%20286B%20-%20Codeforces_files/close-10x10.png" style="position: relative;bottom: -1px;left: 1px;cursor: pointer;">
+</span>
+<div style="clear: both;"></div>
+</li>
+<li>
+<span>
+<a href="https://docs.google.com/file/d/0B-7EjuzKMd80VDUwU1kwcFcyQm8/edit?usp=sharing" title="Англ. разбор" target="_blank">Tutorial</a>
+</span>
+<span style="float: right;">
+<img class="delete-resource-link" resourceid="1663" resourcename="Англ. разбор" resourcemanual="true" src="Problem%20-%20286B%20-%20Codeforces_files/close-10x10.png" style="position: relative;bottom: -1px;left: 1px;cursor: pointer;">
+</span>
+<div style="clear: both;"></div>
+</li>
+</ul>
+</div><!-- /Frame: ContestResourcesSidebarFrame.ftl --><!-- /Frame: ComplexFrame.ftl --><!-- /Frame: ComplexFrame.ftl --></div>
+                    <div id="content" class="content-with-sidebar">
+                <div class="second-level-menu"><!-- Frame: SecondLevelMenuFrame.ftl -->
+<ul class="second-level-menu-list"><li style="position: absolute; display: block; margin: 0px; padding: 0px; left: 0px; top: 0px; width: 73px; height: 20px;" class="backLava"><div class="leftLava"></div><div class="bottomLava"></div><div class="cornerLava"></div></li>
+        <li class="current selectedLava"><a href="http://codeforces.com/problemset">Problems</a></li>
+        <li><a href="http://codeforces.com/problemset/submit">Submit</a></li>
+        <li><a href="http://codeforces.com/problemset/status">Status</a></li>
+        <li><a href="http://codeforces.com/problemset/standings">Standings</a></li>
+        <li><a href="http://codeforces.com/problemset/customtest">Custom test</a></li>
+</ul>
+<!-- /Frame: SecondLevelMenuFrame.ftl --></div>
+<!-- Frame: ProblemViewFrame.ftl -->
+<div class="problemindexholder" problemindex="B">
+<div class="ttypography"><div class="problem-statement"><div class="header"><div class="title">B. Shifting</div><div class="time-limit"><div class="property-title">time limit per test</div>2 seconds</div><div class="memory-limit"><div class="property-title">memory limit per test</div>256 megabytes</div><div class="input-file"><div class="property-title">input</div>standard input</div><div class="output-file"><div class="property-title">output</div>standard output</div></div><div><p>John Doe has found the beautiful permutation formula.</p><p>Let's take permutation <span class="tex-span"><i>p</i> = <i>p</i><sub class="lower-index">1</sub>, <i>p</i><sub class="lower-index">2</sub>, ..., <i>p</i><sub class="lower-index"><i>n</i></sub></span>. Let's define transformation <span class="tex-span"><i>f</i></span> of this permutation: </p><center class="tex-equation"><img class="tex-formula" src="Problem%20-%20286B%20-%20Codeforces_files/0a705f2454ef08a9dae1484aa12af1da33f1d1d2.png" align="middle"></center><p>where <span class="tex-span"><i>k</i></span> <span class="tex-span">(<i>k</i> &gt; 1)</span> is an integer, the transformation parameter, <span class="tex-span"><i>r</i></span> is such maximum integer that <span class="tex-span"><i>rk</i> ≤ <i>n</i></span>. If <span class="tex-span"><i>rk</i> = <i>n</i></span>, then elements <span class="tex-span"><i>p</i><sub class="lower-index"><i>rk</i> + 1</sub>, <i>p</i><sub class="lower-index"><i>rk</i> + 2</sub></span> and so on are omitted. In other words, the described transformation of permutation <span class="tex-span"><i>p</i></span> cyclically shifts to the left each consecutive block of length <span class="tex-span"><i>k</i></span> and the last block with the length equal to the remainder after dividing <span class="tex-span"><i>n</i></span> by <span class="tex-span"><i>k</i></span>. </p><p>John Doe thinks that permutation <span class="tex-span"><i>f</i>(<i>f</i>(&nbsp;...&nbsp;<i>f</i>(<i>p</i> = [1, 2, ..., <i>n</i>], 2)&nbsp;...&nbsp;, <i>n</i> - 1), <i>n</i>)</span>
+ is beautiful. Unfortunately, he cannot quickly find the beautiful 
+permutation he's interested in. That's why he asked you to help him.</p><p>Your task is to find a beautiful permutation for the given <span class="tex-span"><i>n</i></span>. For clarifications, see the notes to the third sample.</p></div><div class="input-specification"><div class="section-title">Input</div><p>A single line contains integer <span class="tex-span"><i>n</i></span> (<span class="tex-span">2 ≤ <i>n</i> ≤ 10<sup class="upper-index">6</sup></span>).</p></div><div class="output-specification"><div class="section-title">Output</div><p>Print <span class="tex-span"><i>n</i></span> distinct space-separated integers from <span class="tex-span">1</span> to <span class="tex-span"><i>n</i></span> — a beautiful permutation of size <span class="tex-span"><i>n</i></span>.</p></div><div class="sample-tests"><div class="section-title">Sample test(s)</div><div class="sample-test"><div class="input"><div class="title">Input</div><pre>2<br></pre></div><div class="output"><div class="title">Output</div><pre>2 1 <br></pre></div><div class="input"><div class="title">Input</div><pre>3<br></pre></div><div class="output"><div class="title">Output</div><pre>1 3 2 <br></pre></div><div class="input"><div class="title">Input</div><pre>4<br></pre></div><div class="output"><div class="title">Output</div><pre>4 2 3 1 <br></pre></div></div></div><div class="note"><div class="section-title">Note</div><p>A note to the third test sample: </p><ul> <li> <span class="tex-span"><i>f</i>([1, 2, 3, 4], 2) = [2, 1, 4, 3]</span> </li><li> <span class="tex-span"><i>f</i>([2, 1, 4, 3], 3) = [1, 4, 2, 3]</span> </li><li> <span class="tex-span"><i>f</i>([1, 4, 2, 3], 4) = [4, 2, 3, 1]</span> </li></ul></div></div></div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        function endsWith(string, suffix) {
+            return string.indexOf(suffix, string.length - suffix.length) !== -1;
+        }
+
+        var inputFileDiv = $("div.input-file");
+        var inputFile = inputFileDiv.text();
+        var outputFileDiv = $("div.output-file");
+        var outputFile = outputFileDiv.text();
+
+        if (!endsWith(inputFile, "standard input")) {
+            inputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        if (!endsWith(outputFile, "standard output")) {
+            outputFileDiv.attr("style", "font-weight: bold");
+        }
+
+        var titleDiv = $("div.header div.title");
+
+
+
+    });
+</script>
+<!-- /Frame: ProblemViewFrame.ftl -->            </div>
+        </div>
+<!-- Frame: Footer.ftl -->
+<br style="clear: both;">
+<div id="footer">
+    <div><a href="http://codeforces.com/">Codeforces</a> (c) Copyright 2010-2014 Mike Mirzayanov</div>
+    <div>The only programming contests Web 2.0 platform</div>
+    <div>Server time: 2014-11-08 14:28:46 (p1).</div>
+</div>
+<!-- /Frame: Footer.ftl -->    <script type="text/javascript">
+        $(document).ready(function() {
+            if ($(window).width() > 1100) {
+
+                $ (window).scroll (function () {
+                    if ($ (this).scrollTop () > 100) {
+                        $ ('.button-up').fadeIn();
+                    } else {
+                        $ ('.button-up').fadeOut();
+                    }
+                });
+
+                $('.button-up').click(function(){
+                    $('body,html').animate({
+                        scrollTop: 0
+                    }, 500);
+                    return false;
+                });
+
+                $('.button-up').hover(function() {
+                    $(this).animate({
+                        'opacity':'1',
+                    }).css({'background-color':'#e7ebf0','color':'#6a86a4'});
+                }, function(){
+                    $(this).animate({
+                        'opacity':'0.7'
+                    }).css({'background':'none','color':'#d3dbe4'});;
+                });
+            }
+            Codeforces.focusOnError();
+        });
+    </script>
+</div>
+
+
+<div id="datepick-div" style="display: none;"></div><div style="display: none;" id="cboxOverlay"></div><div style="display: none; padding-bottom: 42px; padding-right: 42px;" class="" id="colorbox"><div id="cboxWrapper"><div><div style="float: left;" id="cboxTopLeft"></div><div style="float: left;" id="cboxTopCenter"></div><div style="float: left;" id="cboxTopRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxMiddleLeft"></div><div style="float: left;" id="cboxContent"><div style="width: 0px; height: 0px; overflow: hidden; float: left;" id="cboxLoadedContent"></div><div style="float: left;" id="cboxLoadingOverlay"></div><div style="float: left;" id="cboxLoadingGraphic"></div><div style="float: left;" id="cboxTitle"></div><div style="float: left;" id="cboxCurrent"></div><div style="float: left;" id="cboxNext"></div><div style="float: left;" id="cboxPrevious"></div><div style="float: left;" id="cboxSlideshow"></div><div style="float: left;" id="cboxClose"></div></div><div style="float: left;" id="cboxMiddleRight"></div></div><div style="clear: left;"><div style="float: left;" id="cboxBottomLeft"></div><div style="float: left;" id="cboxBottomCenter"></div><div style="float: left;" id="cboxBottomRight"></div></div></div><div style="position: absolute; width: 9999px; visibility: hidden; display: none;"></div></div></body></html>
+<!-- /Page: ProblemsetProblemViewPage.ftl -->

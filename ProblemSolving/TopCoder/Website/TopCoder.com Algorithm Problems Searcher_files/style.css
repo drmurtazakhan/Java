@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+html {
+	height: 100%;
+}
+body {
+	height: 100%;
+	background-color: #F2F3F4;
+	vertical-align: middle;
+	font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	margin: 0px;
+	padding: 0px;
+	font-size: 11px;
+}
+.problem {
+	clear: both;
+	padding-top: 20px;
+}
+.problem_left {
+	float: left;
+	display: inline;
+	width: 25%;
+	background-color: #D7D8D9;
+	border-top: solid 10px black;
+}
+.problem_left_content {
+	padding: 10px;
+}
+.problem_right {
+	float: left;
+	display: inline;
+	background-color: white;
+	width: 75%;
+	border-top: solid 10px black;
+}
+.problem_right_content {
+	padding: 10px;
+}
+.clear {
+	clear: both;
+}
+h1 {
+	padding: 0px;
+	margin: 5px;
+	font-size: 26px;
+	font-weight: bold;
+}
+h2 {
+	padding: 0px;
+	margin: 5px;
+	font-size: 19px;
+}
+h3 {
+	padding: 0px;
+	margin: 0px;
+	font-size: 13px;
+	display: inline;
+}
+h4 {
+	padding: 0px;
+	margin: 0px;
+	font-size: 11px;
+	display: inline;
+}
+table {
+	font-size: 11px;
+	border: none;
+	border-collapse: collapse;
+}
+th {
+	background-color: #D9E8EA;
+	padding: 3px;
+}
+td {
+	padding: 2px;
+}
+#main {
+	text-align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+	display: inline-block;
+}
+input {
+	font-size: 20px;
+	height: 30px;
+}
+a {
+	color: #666666;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+.print_button {
+	background-image: url(images/print.png);
+	height: 32px;
+	width: 32px;
+	display: inline-block;
+}

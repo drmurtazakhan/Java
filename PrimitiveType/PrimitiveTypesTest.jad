@@ -1,0 +1,22 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 7/25/2003 7:59:20 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   PrimitiveTypesTest.java
+
+import java.io.PrintStream;
+
+public class PrimitiveTypesTest
+{
+
+    public PrimitiveTypesTest()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        char c = '\0';
+        char c1 = '\001';
+        System.out.println(c);
+        System.out.println(c1);
+    }
+}

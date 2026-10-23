@@ -1,0 +1,3 @@
+Nadeem, Ahmed	40000
+Abdul Qadir	50000
+Waqar Hasan	45000

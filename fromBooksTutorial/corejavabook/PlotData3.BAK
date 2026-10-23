@@ -1,0 +1,50 @@
+import ccj.*;
+
+public class PlotData3 extends GraphicsApplet
+{  public void run()
+   {  int n = readInt("How many data points?");
+      Product[] data = new Product[n];
+
+      int i;
+      for (i = 0; i < n; i++)
+      {  Product c = new Product();
+         c.read();
+         data[i] = c;
+      } 
+
+      setCoord(0, MAX_SPEED, MAX_PRICE, 0);
+
+      for (i = 0; i < n; i++)
+         data[i].draw();
+   }
+
+   private static double MAX_PRICE = 10000; //$
+   private static double MAX_SPEED = 1000;  //MHz
+}
+
+
+class Product
+{  public Product()
+   {  name = "";
+      price = 0;
+      speed=  0;
+      score = 0;
+   }
+
+   public void read()
+   {  name = GraphicsApplet.readString("Product name:");
+      price = GraphicsApplet.readDouble("Price:");
+      speed = GraphicsApplet.readInt("Speed:");
+   }
+
+   public void draw()
+   {  Message label = new Message(new Point(price, speed), name);
+      label.getStart().draw();
+      label.draw();
+   }
+
+   private String name;
+   private double price;
+   private double speed;
+   private int score;
+}

@@ -1,0 +1,39 @@
+<HTML>
+<HEAD>
+<TITLE>Help</TITLE>
+</HEAD>
+<p>
+<a href="./help.html"><font size=-1>Help about Quadtree</font></a>
+<p>
+<HR>
+<center>
+<H1>Quadtree</H1>
+</center>
+<p>
+Quadtree is a method for compressing bitmap images. 
+A quadtree compression of an image is based on the observation that, 
+if we select a pixel in the image at random, there is a good chance 
+that its neighbors will have the same color. The quadtree method, thus,
+scans the bitmap, area by area, looking for areas full of identical pixels.
+<p>
+The input consists of bitmap pixels, and the output is a tree(a quadtree 
+where a node is either a leaf or has exactly four children). The size 
+of the quadtree depends on the complexity of the image. The method
+starts by building a single node, the root of the final quadtree. It 
+divides the bitmap into four quadrants, each to become a child of the root. 
+A uniform quadrant(one where all the pixels are the same color) is saved 
+as a leaf child of the root. A non-uniform quadrant is saved as an interior 
+node of the root. Any  non-uniform quadrants are then recursively 
+divided into four smaller subquadrants that are saved as four sibling nodes 
+of the quadtree.
+<p>
+The order in which the quadrants are inspected in this package is the following:
+<BR>
+upper-left, upper-right, lower-left, lower-right.
+<p>
+<HR>
+<p>
+<FONT SIZE=-1>
+E-mail comments or suggestions about Quadtree to 
+<i>khuri@cs.sjsu.edu</i> or <i>joy@mathcs.sjsu.edu</i></FONT>
+</HTML>

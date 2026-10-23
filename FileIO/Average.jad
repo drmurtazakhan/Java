@@ -1,0 +1,53 @@
+// Decompiled by DJ v3.2.2.67 Copyright 2002 Atanas Neshkov  Date: 7/13/2003 5:28:58 PM
+// Home Page : http://members.fortunecity.com/neshkov/dj.html  - Check often for new version!
+// Decompiler options: packimports(3) 
+// Source File Name:   Average.java
+
+import java.io.*;
+
+public class Average
+{
+
+    public Average()
+    {
+    }
+
+    public static void main(String args[])
+    {
+        try
+        {
+            BufferedReader bufferedreader = new BufferedReader(new FileReader("grades2.txt"));
+            float f1 = 0.0F;
+            int i = 0;
+            String s;
+            while((s = bufferedreader.readLine()) != null) 
+            {
+                float f = Float.parseFloat(s);
+                f1 += f;
+                i++;
+                System.out.println(f);
+            }
+            if(i == 0)
+            {
+                System.out.println("Error - no grades were read");
+            } else
+            {
+                System.out.println("\nThe average is" + f1 / (float)i);
+                System.out.println("\n" + i + " lines are read");
+            }
+            bufferedreader.close();
+        }
+        catch(FileNotFoundException filenotfoundexception)
+        {
+            System.err.println("Error - Input File is not found");
+        }
+        catch(IOException ioexception)
+        {
+            System.err.println("Error - An I/O error occured");
+        }
+        catch(NumberFormatException numberformatexception)
+        {
+            System.err.println("Error - An invalid float number read");
+        }
+    }
+}

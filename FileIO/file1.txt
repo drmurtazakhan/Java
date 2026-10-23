@@ -1,0 +1,6 @@
+ICS 102-- Lecture 3
+A program may have one or more of the following types of errors:
+Syntax (or Compile-time) error
+Run-time error
+Logic error
+This is sixth line

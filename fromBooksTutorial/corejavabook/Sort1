@@ -1,0 +1,14 @@
+import corejava.*;
+
+public class Sort1
+{
+
+ public static void main (String[] args)
+ {
+   int intArray[]={6,5,4,3,2,1};
+   int count=0;
+   
+   for (int i=
+   System.out.println("Factorial of number"+number+"is "+factorial);
+ }   
+     

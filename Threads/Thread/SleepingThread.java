@@ -1,0 +1,22 @@
+public class SleepingThread extends Thread {
+  private int countDown = 2;
+  public SleepingThread() {
+    System.out.println("MAKING " + getName());
+  }
+  public void run() {
+    while(true) { 
+      try {
+          System.out.println(getName() + " Executing.");
+         //sleep((long)(Math.random()*5000));
+          sleep(5000);
+      }catch(InterruptedException ie){
+          System.out.println(getName() + " Interrupted.");
+      }
+      if(--countDown == 0) return;
+    }
+  }
+  public static void main(String[] args) {
+    for(int i = 0; i < 5; i++)
+      new SleepingThread().start();
+    System.out.println("All Threads Started");
+  }}

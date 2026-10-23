@@ -1,0 +1,106 @@
+PROBLEM STATEMENT
+
+For non-negative integers A and B, let A&B denote the bitwise AND operation.
+That is, for each i, the i-th bit of A&B in binary representation is 1 if and only if the i-th 
+bits of A and B are 1.
+
+
+
+We call a set of non-negative integers S cool if the following conditions are satisfied.
+
+
+For any two distinct elements A, B in S, A&B > 0.
+For any three distinct elements A, B, C in S, A&B&C = 0.
+
+
+
+You are given a vector<long long> subset and an int N.
+All elements in subset are distinct.
+Compute a cool set with N distinct elements such that the cool set contains each element of subset 
+and each element is between 1 and 2^60 - 1, inclusive.
+Return one such cool set as a vector<long long> with elements in increasing order.
+If there are multiple solutions, return the lexicographically smallest one.
+If there are no such cool sets, return an empty vector<long long> instead.
+
+
+
+
+DEFINITION
+Class:BitwiseAnd
+Method:lexSmallest
+Parameters:vector<long long>, int
+Returns:vector<long long>
+Method signature:vector<long long> lexSmallest(vector<long long> subset, int N)
+
+
+CONSTRAINTS
+-N will be between 3 and 50, inclusive.
+-subset will contain between 0 and N elements, inclusive.
+-Each element of subset will be between 1 and 2^60 - 1, inclusive.
+-All the elements in subset will be distinct.
+-Elements in subset will be sorted in increasing order.
+
+
+EXAMPLES
+
+0)
+{14, 20}
+3
+
+Returns: {14, 18, 20 }
+
+There are several possible cool sets.
+For example, the following sets are cool and each of them contains all the elements of subset.
+
+{14, 18, 20}
+{14, 20, 26}
+{14, 20, 50}
+...
+  
+Among these sets, the first one is the lexicographically smallest one.
+
+
+
+1)
+{11, 17, 20}
+4
+
+Returns: { }
+
+There is no cool set because (11&20) equals 0.
+
+2)
+{99, 157}
+4
+
+Returns: {99, 157, 262, 296 }
+
+
+
+3)
+{1152921504606846975}
+3
+
+Returns: { }
+
+The element in subset equals to 2^60-1.
+Note that each element of your cool set should be less than or equal to 2^60-1. 
+
+4)
+{}
+5
+
+Returns: {15, 113, 402, 676, 840 }
+
+
+
+5)
+{1, 3, 5, 7, 9, 11}
+6
+
+Returns: { }
+
+
+
+ This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2010, TopCoder, Inc. All rights reserved.
+ 

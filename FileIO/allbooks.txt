@@ -1,0 +1,7 @@
+2	b	true
+3	c	true
+5	EeE	true
+6	FfF	false
+23	SKDJF KFJ	false
+11	KJ KJK	true
+9	php	false

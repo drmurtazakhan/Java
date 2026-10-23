@@ -1,0 +1,15 @@
+# Who invented Java language ? #
+| Cay Hortsman |
+| Dennis Ritchie |
+| Bill Gate |
+| James Gosling |
+# All java exception classes are subclasses of the which class ? #
+| Exception |
+| Error |
+| Throwable |
+| RuntimeException |
+# JAVA has _____  primitive data types ? #
+| Two |
+| Four |
+| Eight |
+| Nine |

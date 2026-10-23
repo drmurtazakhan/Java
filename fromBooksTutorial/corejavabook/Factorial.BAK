@@ -1,0 +1,22 @@
+import corejava.*;
+
+public class Factorial
+{
+
+ public static void main (String[] args)
+ {
+   int number=Console.readInt("I want to find the factorial of number ");
+   long factorial=fact_method(number);
+   System.out.println("Factorial of number"+number+"is "+factorial);
+ }   
+ public static long fact_method(int num)
+ {
+   long fact=1;
+   for (int i=num; i>1; i--)
+   {
+    fact=fact*i;
+   }
+   return fact;
+ }
+ 
+}    

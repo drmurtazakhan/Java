@@ -1,0 +1,2 @@
+Java is platform independent
+Java is platform independent

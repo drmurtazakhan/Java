@@ -1,0 +1,18 @@
+import corejava.*;
+
+public class Sort1
+{
+
+ public static void main (String[] args)
+ {
+   int intArray[]={6,5,4,3,2,1};
+   int count=0,i=0,j=0;
+   
+   for (i=0; i<5; i++)
+   for (j=i+1; j<6; j++)
+   if (intArray[j] < intArray[i])
+   count=count+1;
+   System.out.println("Count="+count);
+ }   
+} 
+     

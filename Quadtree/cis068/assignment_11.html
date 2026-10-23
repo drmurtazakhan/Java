@@ -1,0 +1,223 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta content="MSHTML 6.00.2800.1106" name="GENERATOR"></head>
+<body>
+<h1>CIS 068 / 2: Lab-Assignment #11: 2d-Image Compression Using QuadTrees</h1>
+
+<p></p><hr><p>
+</p><center>
+<h2>One word first:</h2>
+This assignment is a <b>pure bonus-assignment</b>, i.e. it is scored with 0 points +5 bonus points.<br>
+<b>It is on you to decide, if you want to work on it !</b></center><br>
+The topic covered is not easy, but it is interesting
+(at least it is worth reading the description).
+Although it deals with graphics again, you don't have to write any graphical methods, they will be provided.
+<p>
+I recommend this assignment to
+</p><ul>
+<li>Every student who is interested in the topic and wants to get some experience with trees
+</li><li>Every student who has finished the previous assignments and now has some time left
+</li></ul>
+
+
+Although the program to write is pretty short, you first have to understand what to do. That could take some time.
+If you didn't finish the previous assignments: do that first, then come back here.
+
+
+<p></p><hr><p></p>
+
+<h2>Quadtrees</h2>
+Since we've heard a lot of sorting and binary trees, this time we're doing something  different:
+we try to use the structure of a tree to efficiently store a 2 dimensional image. <br>
+<img src="assignment_11_files/figure1.gif" align="left" border="0">
+For this we will use so called
+<b>Quadtrees</b>, which sounds impressing but is nothing more than a tree where each node is either a leaf or has four
+children, see the example on the left. Top row: quadree, bottom row: not a quadtree.<br clear="all">
+
+But let's start with the image first and forget about trees:<br>
+A 2-dimensional digital image consists of rows and columns of pixels, each having a certain gray-value (we will
+not deal with color images here). The gray values are between 0 and 255: if the value is 0, the pixel is black,
+255: the pixel is white, between 0 and 255: certain gray, the higher the value, the brighter the pixel.
+<p>
+Now imagine an image with no content, just being gray (e.g.: value = 100). We store each single pixel as 1 byte,
+if the image's size is 256x256, we store 65536 times the value 100. Not very efficient.<br>
+A better way would be: if we know, that the image is unicolored, we just store that single color. 
+1 byte instead of 65536, sounds good. But usually we don't have unicolored images. The way out: we can observe, 
+that a lot of images have <b>unicolored subareas</b>. 
+</p><p>
+</p><h2>And here comes the basic idea: subdivide the image into subimages, such that every subimage is unicolored !</h2>
+<p>
+How to do that ?<br>
+It's simple:<br>
+Check the image, if it's unicolored. If so, we're fine. If not:<br>
+Split the image into four quadrants (=4 subimages). Check each quadrant for being unicolored.<br>
+Do this recursively, until each region has the desired property.
+
+</p><p>
+<img src="assignment_11_files/figure2.gif" align="left" border="0">
+Example: Recursive subdivision of multicolored areas into 4 sub-areas:<br>
+The original image (area 0) is split into areas 00,01,02,03<br>
+The areas 02, 03 are unicolored, no further splitting necessary.<br>
+The areas 00, 01 need one further step to be finally split into the areas<br>
+00 -&gt; 001,002,003,004 and <br>
+01 -&gt; 010,011,012,013
+<br clear="all">
+
+
+
+
+
+</p><p>
+As you can guess by the example, the structure can be stored in a quadtree. The leaves will store the color
+information of the unicolored areas. The example above would lead to a tree, that contains information about
+area 0 in the node, the node's 4 children contain information about the areas 00,01,02,03 a.s.o.
+(see figure below for the tree)<br>
+
+
+</p><p>
+What is the information contained in the nodes ?<br>
+The better question would be: what do we need to reconstruct the original image from the tree ?<br>
+The leaves are the building blocks of the image: we reconstruct the image by drawing the
+(rectangular) areas represented
+by the leaves. An area is defined by 
+</p><ul>
+<li>its starting (i.e. upper left) coordinate, 
+</li><li>the size and 
+</li><li>the color.
+</li></ul>
+
+Which information is given by the quadtree ?
+<ul>
+<li>
+The color is known if we store it explicitely in the node (necessary only for leaves)<br>
+</li><li>
+The size is also known:<br>
+We know the starting size of the image (4x4 pixels in the example), by
+dividing height and width by 2 the size of the next subareas can easily be
+computed  (=2x2 for areas 00,01,02,03; and after another division 1x1 for areas in max. depth).<br>
+
+</li><li>The starting coordinate is also known:<br>
+area 0 has (0,0) as upper left coordinate. The upper-left coordinates
+of the sub-areas can be computed straightforward (by adding the size/2 to the x/y coordinates, respecting the
+order of the children)
+</li></ul>
+
+We conclude:
+<center><h2>We can reconstruct the image from a quadtree without loss of information</h2></center>
+
+<p>
+Of course we want to store the quadtree in a file. How to do that ?<br>
+Another question first: WHAT do we have to store ?<br>
+The answer:<br>
+If a node is a leaf, we need the color-information. Hence we store it.<br>
+If a node is not a leaf, there is no information to store, except that this node is not a leaf !<br>
+</p><p>
+We can handle this easily:<br>
+Since the gray values (=color-information) are between 0 and 255, we can store a node not being a leaf by
+the value 256 whereas all leaves are stored by their gray value, i.e. a value between 0..255 (never 256).
+The structure of the tree will be given by the
+order of the file: we store all nodes (i.e. the gray values or the '256') 'recursively from left to right'. 
+The example will explain what it means.
+
+</p><p>
+<img src="assignment_11_files/figure3.gif" align="right">
+The figure shows the example above, the areas are re-labeled for
+simplicity. The tree on the right is the quadtree-representation
+of the image.<br>
+The tree would now be stored using the following technique:
+</p><ul>
+<li>Store the nodes value (either 0..255 or 256)
+</li><li>if node is not a leaf, store the children recursively from left to right.
+</li></ul>
+
+<p>
+The tree in this example would be stored in the following order:<br>
+A (no leaf: recurse)<br>
+B (no leaf: recurse)<br>
+F <br>
+G <br>
+H <br>
+I <br>
+C (is the next sibling of B in depth 1, C is no leaf: recurse)<br>
+J <br>
+K <br>
+L <br>
+M <br>
+D <br>
+E <br>
+
+<br clear="all">
+</p><p>
+Resulting in the order: A,B,F,G,H,I,C,J,K,L,M,D,E<br>
+If we store the gray-values of the areas by this order, we get (black = 0, white = 255, gray = 100, 'no leaf' = 256):<br>
+256,256,0,100,100,255,256,100,100,0,100,100,255<br>
+
+</p><p>
+The only information needed additionally is the initial size of the image. We want to deal with square images only,
+so it's ok to store the image's width only, before the actual data is written.
+
+</p><p></p><hr><p>
+</p><h2>What you have to do</h2>
+You have to create a quadtree from an image (given as a 2d-integer array of gray values) and to write it to
+a textfile.<br>
+I have written a JAVA-code to read such a file, hopefully representing a valid quadtree, and to reconstruct
+and display the image contained. You don't have to deal with any graphics, and the JAVA-sources of the 
+loader will provide you with the basic techniques and ideas of traversing the quadtree.<br>
+
+<p>
+The fileformat:<br>
+The quadtree must be saved in a text-file, each row containing one
+number only, starting with the size (which is
+256 for the test image provided below.Don't be confused by this 256,
+here it is a size, not the information 'no leaf'), followed by the
+tree, as described above. Of course the order of the children is
+important: child 0 (the first to be traversed by the recursion)
+represents the upper left area, child 1
+is the upper right area, child 2 the lower left, child 3 the lower
+right one.
+</p><p>
+To check if the loader works, there is a file 'checkLoader.txt' containing a quadtree.<br>
+Typing 'java TreeCreator checkLoader.txt' should show you an image.
+
+</p><p>
+The image you have to convert to the quadtree is named 'FinalImage.txt'. It is a textfile, containing
+gray values of a 256x256 sized image, one value per pixel. The pixels are ordered rowwise from upper left
+to lower right corner. Each line of the textfile contains only one number.
+
+</p><p>
+So what do you finally have to do ?<br>
+Write a class, loading the 'FinalImage.txt' textfile into a 256x256 integer-array. Create a quadtree structure,
+representing this array (see the example above). Save the quadtree as described as file 'MyFinalResult.txt'.
+Check your result by loading it into my TreeCreator by 'java TreeCreator MyFinalResult.txt'.<br>
+That's it !
+
+</p><p>
+Remark:<br>
+The class TreeCreator can optionally be invoked with an additional parameter, specifying the tree depth which
+is used for the image reconstruction. Values between 0 and 8 show interesting results (&gt;8 is treated as 8).<br>
+Can you figure out what is done by this parameter ?<br>
+
+<br>
+As an example i give you the result you should see by typing
+'java TreeCreator MyFinalResult.txt 5': <br>
+
+</p><p>
+<img src="assignment_11_files/figure4.gif"><br>
+
+</p><p>
+</p><hr>
+<p>
+The files you need:<br>
+<a href="http://knight.cis.temple.edu/%7Elakaemper/courses/cis068_2003/assignments/assig11_folder/TreeCreator.java">JAVA FILE 1</a><br>
+<a href="http://knight.cis.temple.edu/%7Elakaemper/courses/cis068_2003/assignments/assig11_folder/QtNode.java">JAVA FILE 2</a><br>
+<a href="http://knight.cis.temple.edu/%7Elakaemper/courses/cis068_2003/assignments/assig11_folder/QuadTree.java">JAVA FILE 3</a><br>
+<a href="http://knight.cis.temple.edu/%7Elakaemper/courses/cis068_2003/assignments/assig11_folder/FinalImage.txt">The image-textfile you have to convert to a quad tree (320kB)</a><br>
+<a href="http://knight.cis.temple.edu/%7Elakaemper/courses/cis068_2003/assignments/assig11_folder/checkLoader.txt">A quadtree-textfile to check the JAVA classes above (270kB)</a><br>
+</p><p></p><hr><p>
+Score: 0 points  +5 bonus points (see first chapter for explanation)<br>
+This assignment is due to 5/5/03 <br>
+
+
+</p><p></p><hr><p>
+Good luck !</p></body></html>

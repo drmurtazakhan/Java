@@ -1,0 +1,34 @@
+public class StringPlay
+{  public static void main(String[] args)
+   {  
+   int i=0;
+   int name_segment=1;
+   String space=" ";
+   String myname="Murtaza Ali Khan";
+   System.out.println("My Name is "+myname);   
+   int myname_length=myname.length();
+   System.out.println("Length of my name with spaces is "+myname_length);   
+    while (i!=-1)
+    {
+     if ((i=myname.indexOf(space,i))!=-1)
+     { name_segment++; i++;}
+    } 
+   System.out.println("My name has "+name_segment+" segments");     
+   String fname=myname.substring(0,7);
+   String lname=myname.substring(12,16);
+   System.out.println("Last Name is "+lname);   
+   System.out.println("First Name is "+fname);   
+   String concat_name=fname+lname;
+   System.out.println("Concated Name is "+concat_name);   
+   char first_char=myname.charAt(0);
+   System.out.println("First character of my name is "+first_char);   
+   char last_char=myname.charAt(myname.length()-1);
+   System.out.println("Last character of my name is "+last_char);   
+   
+   
+      
+   }
+}
+      
+      
+      

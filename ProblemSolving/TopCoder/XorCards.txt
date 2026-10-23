@@ -1,0 +1,101 @@
+PROBLEM STATEMENT
+You have a set of cards.
+There is one non-negative integer on each card.
+Different cards may contain the same integer.
+For each i, the number written on the i-th card (0-based index) is number[i].
+Your friend wants to select a subset of those cards such that the bitwise xor of the selected 
+cards is less than or equal to limit.
+
+
+
+You are given the vector<long long> number and the long long limit.
+Count the number of ways in which your friend can select the subset of cards.
+Two subsets count as different if they differ as sets of cards (even if the corresponding sets of 
+numbers are the same, see Example 4).
+
+DEFINITION
+Class:XorCards
+Method:numberOfWays
+Parameters:vector<long long>, long long
+Returns:long long
+Method signature:long long numberOfWays(vector<long long> number, long long limit)
+
+
+NOTES
+-XOR (exclusive or) is a binary operation, performed on two numbers in binary notation. First, the 
+shorter number is prepended with leading zeroes until both numbers have the same number of digits 
+(in binary). Then, the result is calculated as follows: for each bit where the numbers differ the 
+result has 1 in its binary representation. It has 0 in all other positions.
+-For example 42 XOR 7 is performed as follows. First, the numbers are converted to binary: 42 is 
+101010 and 7 is 111. Then the shorter number is prepended with leading zeros until both numbers 
+have the same number of digits. This means 7 becomes 000111. Then 101010 XOR 000111 = 101101 (the 
+result has ones only in the positions where the two numbers differ). Then the result can be 
+converted back to decimal notation. In this case 101101 = 45, so 42 XOR 7 = 45.
+-If your friend decides to select zero cards, the bitwise xor of numbers on selected cards is zero.
+-If your friend decides to select a single card, the bitwise xor of numbers on selected cards is 
+the number on the selected card.
+
+
+CONSTRAINTS
+-number will contain between 1 and 50 elements, inclusive.
+-Each element in number will be between 0 and 1,000,000,000,000,000 (10^15), inclusive.
+-limit will be between 0 and 1,000,000,000,000,000 (10^15), inclusive.
+
+
+EXAMPLES
+
+0)
+{1,2}
+2
+
+Returns: 3
+
+This set of cards has four possible subsets.
+Here they are, along with the corresponding bitwise xors:
+{} => 0, {1} => 1, {2} => 2, and {1,2} => 3.
+Note that limit=2.
+Out of these four subsets, for the first three the bitwise xor of selected numbers is at most 
+equal to limit.
+
+1)
+{5,5}
+3
+
+Returns: 2
+
+The two good subsets are {} and {5,5}.
+
+2)
+{1,2,3,4,5,6,7}
+5
+
+Returns: 96
+
+
+
+3)
+{123, 456, 789, 147, 258, 369, 159, 357}
+500
+
+Returns: 125
+
+
+
+4)
+{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0}
+1000000000000000
+
+Returns: 4294967296
+
+
+
+5)
+{1000000000000000, 999999999999999}
+65535
+
+Returns: 2
+
+
+
+ This problem statement is the exclusive and proprietary property of TopCoder, Inc. Any unauthorized use or reproduction of this information without the prior written consent of TopCoder, Inc. is strictly prohibited. (c)2010, TopCoder, Inc. All rights reserved.
+ 

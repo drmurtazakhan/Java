@@ -1,0 +1,555 @@
+<html><head><title>TopCoder Statistics - Problem Statement</title>
+
+
+
+
+ 
+   
+   
+
+
+<!-- base href="http://www.topcoder.com/" -->
+
+   
+
+<script language="JavaScript" type="text/javascript" src="ChipArea_files/tcscript.js"></script><link type="image/x-icon" rel="shortcut icon" href="http://www.topcoder.com/i/favicon.ico">
+
+
+
+
+
+
+<link type="text/css" rel="stylesheet" href="ChipArea_files/style.css">
+<link type="text/css" rel="stylesheet" href="ChipArea_files/coders.css">
+<link type="text/css" rel="stylesheet" href="ChipArea_files/tcStyles.css">
+
+
+
+<style type="text/css">
+a:link {color: white}
+a:visited {color: white}
+</style></head><body text="#ffffff">
+   
+
+
+
+
+<script type="text/javascript">
+var objTopPopUp = null;
+// called when you topPopup at the bottom right of an object
+function topPopUp(topPopper,topPopupID) {
+    var pos = findPos(topPopper);
+    var x = pos[0] + topPopper.offsetWidth + 2;
+    var y = pos[1] + topPopper.offsetHeight + 2;
+    topPopShow(x,y,topPopupID);
+}
+// called when you know the exact spot you want to topPop up at
+function topPopShow(posX,posY,topPopupID) {
+    objTopPopUp = document.getElementById(topPopupID);
+    objTopPopUp.style.left = posX + 'px';
+    objTopPopUp.style.top = posY + 'px';
+    objTopPopUp.style.display = 'block';
+}
+function topPopHide() {
+    objTopPopUp.style.display = 'none';
+    objTopPopUp = null;
+}
+function findPos(obj) {
+    var curLeft = curTop = 0;
+    if (obj.offsetParent) {
+        curLeft = obj.offsetLeft;
+        curTop = obj.offsetTop;
+        while (obj = obj.offsetParent) {
+            curLeft += obj.offsetLeft;
+            curTop += obj.offsetTop;
+        }
+    }
+    return [curLeft,curTop];
+}
+</script>
+
+
+<div id="launch0" class="popUp"><div><strong>Competitions Home</strong></div></div>
+<div id="launch1" class="popUp"><div><strong>Launch Algorithm Competitions Arena</strong></div></div>
+<div id="launch2" class="popUp"><div><strong>Launch High School Competitions Arena</strong></div></div>
+<div id="launch3" class="popUp"><div><strong>Component Design Active Contests</strong></div></div>
+<div id="launch4" class="popUp"><div><strong>Component Development Active Contests</strong></div></div>
+<div id="launch5" class="popUp"><div><strong>Marathon Match Active Contests</strong></div></div>
+
+<map name="competeBar" id="competeBar"><area shape="rect" alt="" coords="0,0,66,30" href="http://www.topcoder.com/tc" onmouseover="topPopShow(73,65,'launch0')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="68,0,106,30" href="javascript:arena();" onmouseover="topPopShow(108,65,'launch1')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="107,0,153,30" href="javascript:arena();" onmouseover="topPopShow(155,65,'launch2')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="154,0,179,30" href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=112" onmouseover="topPopShow(181,65,'launch3')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="180,0,205,30" href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=113" onmouseover="topPopShow(207,65,'launch4')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="206,0,250,30" href="http://www.topcoder.com/longcontest/?module=ViewActiveContests" onmouseover="topPopShow(252,65,'launch5')" onmouseout="topPopHide()">
+
+
+
+
+
+
+</map>
+
+
+<div style="background: transparent none repeat scroll 0%; position: absolute; left: 0pt; top: 31px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+   <img src="ChipArea_files/competeBar.gif" alt="" usemap="#competeBar">
+</div>
+
+
+<div style="position: absolute; right: 0px; top: 31px;"><a href="http://www.topcoder.com/reg/?nrg=false"><img src="ChipArea_files/update_my_profile.gif" alt="Update My Profile" style="display: block;"></a></div>
+
+
+<div style="margin: 0px 290px 0px 280px;" align="center">
+   <div id="outerLogo">
+      <div id="innerLogo">
+      <a href="http://www.topcoder.com/"><img src="ChipArea_files/topcoder.gif" alt="TopCoder" style="display: block;"></a>
+      </div>
+   </div>
+</div>
+
+<div class="memberCountBox">
+Member Count: 118,969 - 
+
+
+August 4, 2007
+
+&nbsp;<a class="gMetal" href="javascript:tcTime()">[Get Time]</a>
+</div>
+
+<div class="topBar">
+    <div style="margin: 5px 0px 0px; float: right;">
+        
+            Hello,&nbsp;<a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=22690917" class="coderTextWhite">mak2000</a>
+            
+                | <a class="gMetal" href="http://www.topcoder.com/tc?module=Logout">Logout</a>
+            
+        
+    </div>
+</div>
+   <table border="0" cellpadding="0" cellspacing="0" width="100%">
+     <tbody><tr>
+       <td valign="top" width="180">
+         
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript" src="ChipArea_files/arena.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function toggleMenu(menuTitle,menuID){
+   var menu = document.getElementById(menuID);
+   if(menu.style.display == 'block') menu.className = 'CLOSED';
+   else if(menu.className == 'OPEN' && menu.style.display != 'none') menu.className = 'CLOSED';
+   else {
+      menu.className = 'OPEN';
+   }
+   if(menuTitle.blur)menuTitle.blur();
+   if(menuTitle.className == 'exp') menuTitle.className = 'exp_ed';
+   else menuTitle.className = 'exp';
+   return;
+}
+function flipMenu(myMenuName){
+   var menuName = document.getElementById(myMenuName);
+   menuName.className = 'exp_ed';
+}
+
+// -->
+</script>
+
+<div style="padding: 0px;"><img src="ChipArea_files/leftnav_top.gif" alt=""></div>
+<div id="navbar">
+    
+<ul>
+<li class="exp_ed"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_competitions')">Competitions</a>
+<ul id="m_competitions" class="OPEN">
+<li><a href="http://www.topcoder.com/tc">Home</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_competitor_stats')">The Tops</a>
+<ul id="m_competitor_stats">
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_top_rated_competitors')">Top Ranked</a>
+<ul id="m_top_rated_competitors">
+<li><a href="http://www.topcoder.com/tc?module=AlgoRank">Algorithm</a></li>
+<li><a href="http://www.topcoder.com/stat?c=top_designers">Design</a></li>
+<li><a href="http://www.topcoder.com/stat?c=top_developers">Development</a></li>
+<li><a href="http://www.topcoder.com/tc?module=HSRank">High School</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_recordbook')">Record Book</a>
+<ul id="m_recordbook">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=statistics&amp;d2=recordbook_home">Algorithm</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=compstats&amp;d2=comp_recordbook_home">Component</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_com')">Coder of the Month</a>
+<ul id="m_com">
+<li><a href="http://www.topcoder.com/tc?module=COMHistory&amp;achtid=5">Algorithm</a></li>
+<li><a href="http://www.topcoder.com/tc?module=COMHistory&amp;achtid=6">Design</a></li>
+<li><a href="http://www.topcoder.com/tc?module=COMHistory&amp;achtid=7">Development</a></li>
+</ul></li>
+</ul></li>
+<li class="exp_ed"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_algo_competitions')">Algorithm</a>
+<ul id="m_algo_competitions" class="OPEN">
+<li><a href="javascript:arena();">Launch Arena</a></li>
+<li class="exp_ed"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_algo_stats')">Statistics</a>
+<ul id="m_algo_stats" class="OPEN">
+<li><a href="http://www.topcoder.com/tc?module=MatchList">Match Archive</a></li>
+<li><a href="http://www.topcoder.com/stat?c=round_overview">Match Overviews</a></li>
+<li><a href="http://www.topcoder.com/tc?module=SrmDivisionWins">Match Winners</a></li>
+<li><a href="http://www.topcoder.com/stat?c=last_match">Match Results</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=match_editorials&amp;d2=archive">Match Editorials</a></li>
+<li class="highlight"><a href="http://www.topcoder.com/tc?module=ProblemArchive">Problem Archive</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ratid=1">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=dataFeed">Data Feeds</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_algo_support')">Support / FAQs</a>
+<ul id="m_algo_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=index">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=faqIndex">FAQs</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=sampleProblems">Sample Problems</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=ratings">Rating System</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=problemWriter&amp;node=algo_write">Write Problems</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=algo_get_paid">How to Get Paid</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=charity">Charity Donations</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_des_competitions')">Software Design</a>
+<ul id="m_des_competitions">
+<li><a href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=112">Active Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ContestStatus&amp;ph=112">Contest Status</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewReviewProjects&amp;ph=112">Review Opportunities</a></li>
+<li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_des_stats')">Statistics</a>
+<ul id="m_des_stats">
+<li><a href="http://www.topcoder.com/tc?module=CompList&amp;ph=112">Past Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ph=112">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desDataFeed">Data Feeds</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=ReviewBoard&amp;ph=112">Meet the Review Board</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_des_support')">Support / FAQs</a>
+<ul id="m_des_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desGettingStarted">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desDocumentation">Documentation</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desRatings">Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desReliability">Reliability Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=des_get_paid">How to Get Paid</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_dev_competitions')">Software Development</a>
+<ul id="m_dev_competitions">
+<li><a href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=113">Active Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ContestStatus&amp;ph=113">Contest Status</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewReviewProjects&amp;ph=113">Review Opportunities</a></li>
+<li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_dev_stats')">Statistics</a>
+<ul id="m_dev_stats">
+<li><a href="http://www.topcoder.com/tc?module=CompList&amp;ph=113">Past Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ph=113">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devDataFeed">Data Feeds</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=ReviewBoard&amp;ph=113">Meet the Review Board</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_dev_support')">Support / FAQs</a>
+<ul id="m_dev_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devGettingStarted">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devDocumentation">Documentation</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devRatings">Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devReliability">Reliability Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=dev_get_paid">How to Get Paid</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_assembly_competitions')">Software Assembly</a>
+<ul id="m_assembly_competitions">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=overview">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewAssemblyActiveContests">Active Contests</a></li>
+<li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_assembly_support')">Support / FAQs</a>
+<ul id="m_assembly_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=instructions">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=tutorial">Tutorial</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=documentation">Documentation</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=assem_get_paid">How to Get Paid</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_testing_competitions')">Software Testing</a>
+<ul id="m_testing_competitions">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=overview">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=activeContests">Active Contests</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_testing_support')">Support / FAQs</a>
+<ul id="m_testing_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=instructions">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=tutorial">Tutorial</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=documentation">Documentation</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_hs_competitions')">High School</a>
+<ul id="m_hs_competitions">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=home">Overview</a></li>
+<li><a href="javascript:arena();">Launch Arena</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_hs_stats')">Statistics</a>
+<ul id="m_hs_stats">
+<li><a href="http://www.topcoder.com/tc?module=HSRoundOverview">Match Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=HSRoundStatsTeam">Match Results (Team)</a></li>
+<li><a href="http://www.topcoder.com/tc?module=HSRoundStatsInd">Match Results (Indiv.)</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=match_editorials&amp;d3=archive">Match Editorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ratid=2">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=dataFeed">Data Feeds</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=sponsorship">Sponsorship</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_hs_support')">Support / FAQs</a>
+<ul id="m_hs_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=index">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=faqIndex">FAQs</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=sampleProblems">Sample Problems</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=ratings">Rating System</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=problemWriter&amp;node=hs_write">Write Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_long_contests')">Marathon Matches</a>
+<ul id="m_long_contests">
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewActiveContests">Active Contests</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewPractice&amp;rt=14">Practice</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=intel_overview">Intel Multi-Threading Competition Series</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewActiveContests&amp;rt=15">Intel Active Contests</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewQueue">Queue Status</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=match_editorials&amp;d2=archive">Match Editorials</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_long_support')">Support / FAQs</a>
+<ul id="m_long_support">
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=instructions">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=support&amp;d2=ratings">Rating System</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_tournaments')">Tournaments</a>
+<ul id="m_tournaments">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tournaments&amp;d2=home">TopCoder</a></li>
+<li><a href="http://www.topcoder.com/pl/">Powered by TopCoder</a></li>
+<li><a href="http://www.topcoder.com/tc?module=CRPFStatic&amp;d1=crpf&amp;d2=crpf_overview">Charity</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=digital_run&amp;d2=description">The Digital Run</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_edu_content')">Educational Content</a>
+<ul id="m_edu_content">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=education&amp;d2=overview">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=alg_index">Algorithm Tutorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=comp_index">Component Tutorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=mm_index">Marathon Tutorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=features&amp;d2=archive">Features</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=writeForTC">Write for TopCoder</a></li>
+</ul></li>
+</ul></li>
+<li><a href="http://forums.topcoder.com/">Forums</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=calendar&amp;d2=thisMonth">Event Calendar</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=pressroom&amp;d2=index">Press Room</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=media&amp;d2=tcchannel">TC Channel</a></li>
+<li><a href="http://www.topcoder.com/tc?&amp;module=SurveyList">Surveys</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_my_tc')">My TopCoder</a>
+<ul id="m_my_tc">
+<li><a href="http://www.topcoder.com/reg/?nrg=false">Update My Profile</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewReferrals">Member Referrals</a></li>
+<li><a href="http://www.topcoder.com/PactsMemberServlet?module=AffidavitHistory">Affidavits</a></li>
+<li><a href="http://www.topcoder.com/tc?module=VisaSelection">Visa Letter Status</a></li>
+<li><a href="http://www.topcoder.com/PactsMemberServlet?module=AssignmentDocumentHistory">Assignment Documents</a></li>
+<li><a href="http://www.topcoder.com/PactsMemberServlet?module=PaymentHistory">Payments</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=card&amp;d2=description">Cards / Badges</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_about_tc')">About TopCoder</a>
+<ul id="m_about_tc">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=index">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=contactus">Contact Us</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=whyjoin">Why Join TopCoder?</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=jobs">Working at TopCoder</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=management">Management Team</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=terms">Terms, Revisions</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=privacy">Privacy Policy</a></li>
+</ul></li></ul>
+
+    
+
+<div id="navbarSearch">
+<b>Member Search:</b>
+<form action="http://www.topcoder.com/tc" method="get" name="simpleSearchForm" class="noSpace" id="simpleSearchForm">
+   <input class="noSpace" name="module" value="SimpleSearch" type="hidden">
+   <input class="noSpace" name="ha" value="Handle:" size="12" maxlength="15" onfocus="javascript:
+         if (document.simpleSearchForm.ha.value=='Handle:')
+            document.simpleSearchForm.ha.value = '';" onblur="javascript:
+         if (document.simpleSearchForm.ha.value == '')
+            document.simpleSearchForm.ha.value = 'Handle:';" type="text">
+   <a class="gMetal" href="javascript:void document.simpleSearchForm.submit();">Go</a><br>
+   <a class="gMetal" href="http://www.topcoder.com/tc?module=ViewAdvanced">Advanced Search</a>
+</form>
+</div>
+</div>
+<div style="padding: 0px 0px 23px; float: left; clear: left;"><img src="ChipArea_files/leftnav_bottom.gif" alt=""></div>
+
+
+    <div style="margin: 0px; float: left; clear: left; width: 170px;" align="center">
+        <img src="ChipArea_files/brackets.png" alt="" style="margin-bottom: 23px;">
+    </div>
+
+       </td>
+       <td valign="top" width="10"><img src="ChipArea_files/clear.gif" border="0" height="1" width="10"></td>
+       <td class="bodyText" valign="top" width="100%"><img src="ChipArea_files/clear.gif" border="0" height="1" vspace="5" width="240"><br>
+
+         <!-- BEGIN BODY -->
+         <table border="0" cellpadding="0" cellspacing="0" width="100%">
+           <tbody><tr>
+             <td align="left" height="26" valign="bottom" width="11"><img src="ChipArea_files/steelblue_top_left1.gif" border="0" height="26" width="11"></td>
+             <td align="left" valign="bottom" width="180"><img src="ChipArea_files/header_statistics.gif" border="0" height="26" width="180"></td>
+             <td class="bodyTextBold" valign="middle" width="100%">
+               &nbsp;<span class="bodySubhead">&nbsp;&nbsp;Problem Statement&nbsp;&nbsp;</span>
+             </td>
+             <td align="right" valign="top" width="10"><img src="ChipArea_files/clear.gif" alt="" border="0" height="26" width="10"></td>
+           </tr>
+         </tbody></table>
+
+
+         <table bgcolor="#001b35" border="0" cellpadding="10" cellspacing="0" width="100%">
+           <tbody><tr>
+             <td valign="top" width="100%"><img src="ChipArea_files/clear.gif" alt="" border="0" height="1" width="240"><br>
+               <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                 <tbody><tr>
+                   <td colspan="7"><img src="ChipArea_files/clear.gif" alt="" border="0" height="1" width="1"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="ChipArea_files/clear.gif" alt="" border="0" height="5" width="1"></td>
+                 </tr>
+                 <tr>
+                   
+                     <td class="statTextBig" colspan="7" background="ChipArea_files/steel_gray_bg.gif" height="18">&nbsp;Problem Statement for ChipArea</td>
+                   
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="ChipArea_files/clear.gif" alt="" border="0" height="1" width="1"></td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="ChipArea_files/clear.gif" alt="" border="0" height="1" width="1"></td>
+                 </tr>
+                 <tr>
+                   <td class="problemText" align="left" valign="middle">
+                      
+              		<table><tbody><tr><td colspan="2" class="statText"><h3>Problem Statement</h3></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText">We manufacture wafers for the production of computer chips. Our manufacturing
+process is very cheap, but produces a large number of bad points on the surface
+of the wafer.  We need to be able to determine the largest rectangular area
+that contains no bad points and thus can safely be used for a chip.
+<pre></pre><p>
+The wafer is square with a coordinate system where (0,0) refers to the bottom
+left corner and (1,1) refers to the upper right corner. We can 
+automatically scan a wafer and find the coordinates of each bad point.
+Your task is to develop an efficient algorithm that is given the coordinates of 
+the <b>n</b> bad points and that returns the area of the largest rectangle 
+with boundaries parallel to the coordinate system that contains no bad points.
+</p><p>
+To demonstrate that the algorithm is efficient, you will run it using values from a 
+random number stream defined recursively by</p><pre>         R<sub>0</sub> = 111
+         R<sub>i</sub> = 111*R<sub>i-1</sub> mod 323537  (for i&gt;0)</pre>
+This produces values that are uniformly distributed in the range 1 to 323537 and its
+cycle length is 323536.  Your program will be told how many R's to <b>skip</b> 
+(as a way of "seeding" the random
+generator). The <b>n</b> points can be generated by the following code:<pre>
+int R=1;
+for(int j = 0; j &lt; skip; j++) R = 111 * R % 323537;
+for(int pt = 0; pt &lt; n; pt++){
+    R = 111*R%323537; double x = R/323537.0;
+    R = 111*R%323537; double y = R/323537.0;
+    //x,y are the coordinates of this point ...
+}</pre>
+
+Given <b>skip</b> and <b>n</b>
+return the largest area.
+
+</td></tr><tr><td colspan="2" class="statText">&nbsp;</td></tr><tr><td colspan="2" class="statText"><h3>Definition</h3></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText">Class:</td><td class="statText">ChipArea</td></tr><tr><td class="statText">Method:</td><td class="statText">maxArea</td></tr><tr><td class="statText">Parameters:</td><td class="statText">int, int</td></tr><tr><td class="statText">Returns:</td><td class="statText">double</td></tr><tr><td class="statText">Method signature:</td><td class="statText">double maxArea(int skip, int n)</td></tr><tr><td colspan="2" class="statText">(be sure your method is public)</td></tr></tbody></table></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr><tr><td class="statText"></td></tr><tr><td colspan="2" class="statText">&nbsp;</td></tr><tr><td colspan="2" class="statText"><h3>Notes</h3></td></tr><tr><td class="statText" align="center" valign="top">-</td><td class="statText">A return value with either an absolute or relative error of less than 1.0E-9 is considered correct.</td></tr><tr><td colspan="2" class="statText">&nbsp;</td></tr><tr><td colspan="2" class="statText"><h3>Constraints</h3></td></tr><tr><td class="statText" align="center" valign="top">-</td><td class="statText"><b>skip</b> will be between 0 and 20,000, inclusive.</td></tr><tr><td class="statText" align="center" valign="top">-</td><td class="statText"><b>n</b> will be between 2 and 25,000, inclusive.</td></tr><tr><td colspan="2" class="statText">&nbsp;</td></tr><tr><td colspan="2" class="statText"><h3>Examples</h3></td></tr><tr><td class="statText" align="center" nowrap="true">0)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>0</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.6058657896932963</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText">
+The first six random numbers give the 3 points as
+(0.00034308286223832206,0.038082197708453745),(0.22712394563836594,0.21075796585861895),
+(0.3941342103067037,0.7488973440441125).
+The biggest rectangular area that contains none of these is the area to
+the right of the third point which is approximately (1-.394)*(1-0) =
+.606
+</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">1)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>3</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.6885306552897291</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText">
+
+   After skipping the first 3 random numbers, using the next six to produce 3 points gives approximately 
+   (0.211,0.394),(0.749,0.128),(0.164,0.224)
+   The biggest area is the area to the right of first point and above the second point which is (1-.211)*(1-.128) = 0.69
+</td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">2)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>7995</pre></td></tr><tr><td class="statText"><pre>25000</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.002543062783060902</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">3)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>0</pre></td></tr><tr><td class="statText"><pre>3000</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.0053171745173182395</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">4)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>2657</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.4487007515408176</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">5)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>12321</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.615729203993725</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">6)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>15952</pre></td></tr><tr><td class="statText"><pre>2</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.8629558001353441</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText"></td></tr></tbody></table></td></tr></tbody></table></td></tr><tr><td class="statText" align="center" nowrap="true">7)</td><td class="statText"></td></tr><tr><td class="statText">&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="statText"><table><tbody><tr><td class="statText"><table><tbody><tr><td class="statText"><pre>2215</pre></td></tr><tr><td class="statText"><pre>3</pre></td></tr></tbody></table></td></tr><tr><td class="statText"><pre>Returns: 0.8157487800137614</pre></td></tr><tr><td class="statText"><table><tbody><tr><td colspan="2" class="statText"></td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></table><hr><p>This
+problem statement is the exclusive and proprietary property of
+TopCoder, Inc. Any unauthorized use or reproduction of this information
+without the prior written consent of TopCoder, Inc. is strictly
+prohibited. (c)2006, TopCoder, Inc. All rights reserved. </p>
+                      
+                   </td>
+                 </tr>
+                 <tr>
+                   <td colspan="7"><img src="ChipArea_files/clear.gif" alt="" border="0" height="3" width="1"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7" background="ChipArea_files/steel_blue_bg.gif"><img src="ChipArea_files/clear.gif" alt="" border="0" height="5" width="1"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7"><img src="ChipArea_files/clear.gif" alt="" border="0" height="16" width="1"></td>
+                 </tr>
+                 <tr>
+                   <td class="statText" colspan="7">
+                      This problem was used for:
+   
+   	<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10766&amp;pm=4593">Single Round Match 357 Round 1 - Division I, Level Three</a>
+   
+                   
+                   </td>
+                 </tr>
+
+
+               </tbody></table>
+             </td>
+           </tr>
+           <tr>
+             <td width="100%"><img src="ChipArea_files/clear.gif" alt="" border="0" height="10" width="1"></td>
+           </tr>
+         </tbody></table>
+
+         <p><br></p>
+
+         <!-- END BODY -->
+
+       </td>
+       <td width="10"><img src="ChipArea_files/clear.gif" border="0" height="1" width="10"></td>
+       <td valign="top" width="180"><img src="ChipArea_files/clear.gif" border="0" height="1" width="180">
+         
+
+
+
+<script type="text/javascript" language="javascript">
+
+</script>
+
+
+
+<div class="rightColContent">
+    <br><br>
+</div>
+
+
+       </td>
+       
+    <!-- Gutter -->
+    <td width="10"><img src="ChipArea_files/clear.gif" border="0" height="1" width="10"></td>
+    <!-- Gutter Ends -->
+     </tr>
+   </tbody></table>
+   
+   
+   
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+    <tr>
+        <td class="footer" width="100%">
+            <a href="http://www.topcoder.com/" class="footerLinks">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=index" class="footerLinks">About TopCoder</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=pressroom&amp;d2=index" class="footerLinks">Press Room</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=contactus" class="footerLinks">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=privacy" class="footerLinks">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=terms" class="footerLinks">Terms</a>
+            <br>
+            <a href="http://www.topcoder.com/tc" class="footerLinks">Developer Center</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/corp/?module=Static&amp;d1=corp&amp;d2=index" class="footerLinks">Corporate Services</a>        </td>
+    </tr>
+    <tr><td class="copyright" width="100%">Copyright © 2001-2007, TopCoder, Inc. All rights reserved.</td></tr>
+</tbody>
+</table>
+
+ 
+</body></html>

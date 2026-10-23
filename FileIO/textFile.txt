@@ -1,0 +1,4 @@
+A text file can be
+created using any text editor
+
+such as notepad , JCreator, Widedit etc.

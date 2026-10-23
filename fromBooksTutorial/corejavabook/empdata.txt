@@ -1,0 +1,7 @@
+3
+Hacker, Harry
+34500
+Cracker, Carl
+64500
+Tester, Tony
+94500

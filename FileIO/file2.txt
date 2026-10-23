@@ -1,0 +1,4 @@
+A program may have one or more of the following types of errors:
+Syntax (or Compile-time) error
+Run-time error
+Logic error

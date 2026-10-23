@@ -1,0 +1,2802 @@
+<html><head>
+
+
+
+
+
+
+
+<script language="JavaScript"><!--
+function next() {
+    document.problemListForm.sr.value =51;
+    document.problemListForm.er.value =100;
+    document.problemListForm.sc.value = '';
+    document.problemListForm.sd.value = '';
+    document.problemListForm.submit();
+}
+function previous() {
+    document.problemListForm.sr.value =-49;
+    document.problemListForm.er.value =0;
+    document.problemListForm.sc.value = '';
+    document.problemListForm.sd.value = '';
+    document.problemListForm.submit();
+}
+//--></script>
+
+<script language="JavaScript"><!--
+function submitEnter(e) {
+    var keycode;
+    if (window.event) keycode = window.event.keyCode;
+    else if (e) keycode = e.which;
+    else return true;
+    if (keycode == 13) {
+        document.problemListForm.submit();
+        return false;
+    } else return true;
+}
+//--></script><title>TopCoder Statistics - Problem Archive</title>
+
+
+
+
+    
+    
+
+<script language="JavaScript" type="text/javascript" src="Hotel_files/tcscript.js"></script><link type="image/x-icon" rel="shortcut icon" href="http://www.topcoder.com/i/favicon.ico">
+
+
+    
+
+
+
+<link type="text/css" rel="stylesheet" href="Hotel_files/style.css">
+<link type="text/css" rel="stylesheet" href="Hotel_files/coders.css">
+<link type="text/css" rel="stylesheet" href="Hotel_files/stats.css">
+<link type="text/css" rel="stylesheet" href="Hotel_files/tcStyles.css"></head><body>
+
+
+
+
+
+<script type="text/javascript">
+var objTopPopUp = null;
+// called when you topPopup at the bottom right of an object
+function topPopUp(topPopper,topPopupID) {
+    var pos = findPos(topPopper);
+    var x = pos[0] + topPopper.offsetWidth + 2;
+    var y = pos[1] + topPopper.offsetHeight + 2;
+    topPopShow(x,y,topPopupID);
+}
+// called when you know the exact spot you want to topPop up at
+function topPopShow(posX,posY,topPopupID) {
+    objTopPopUp = document.getElementById(topPopupID);
+    objTopPopUp.style.left = posX + 'px';
+    objTopPopUp.style.top = posY + 'px';
+    objTopPopUp.style.display = 'block';
+}
+function topPopHide() {
+    objTopPopUp.style.display = 'none';
+    objTopPopUp = null;
+}
+function findPos(obj) {
+    var curLeft = curTop = 0;
+    if (obj.offsetParent) {
+        curLeft = obj.offsetLeft;
+        curTop = obj.offsetTop;
+        while (obj = obj.offsetParent) {
+            curLeft += obj.offsetLeft;
+            curTop += obj.offsetTop;
+        }
+    }
+    return [curLeft,curTop];
+}
+</script>
+
+
+<div id="launch0" class="popUp"><div><strong>Competitions Home</strong></div></div>
+<div id="launch1" class="popUp"><div><strong>Launch Algorithm Competitions Arena</strong></div></div>
+<div id="launch2" class="popUp"><div><strong>Launch High School Competitions Arena</strong></div></div>
+<div id="launch3" class="popUp"><div><strong>Component Design Active Contests</strong></div></div>
+<div id="launch4" class="popUp"><div><strong>Component Development Active Contests</strong></div></div>
+<div id="launch5" class="popUp"><div><strong>Marathon Match Active Contests</strong></div></div>
+
+<map name="competeBar" id="competeBar"><area shape="rect" alt="" coords="0,0,66,30" href="http://www.topcoder.com/tc" onmouseover="topPopShow(73,65,'launch0')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="68,0,106,30" href="javascript:arena();" onmouseover="topPopShow(108,65,'launch1')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="107,0,153,30" href="javascript:arena();" onmouseover="topPopShow(155,65,'launch2')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="154,0,179,30" href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=112" onmouseover="topPopShow(181,65,'launch3')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="180,0,205,30" href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=113" onmouseover="topPopShow(207,65,'launch4')" onmouseout="topPopHide()"><area shape="rect" alt="" coords="206,0,250,30" href="http://www.topcoder.com/longcontest/?module=ViewActiveContests" onmouseover="topPopShow(252,65,'launch5')" onmouseout="topPopHide()">
+
+
+
+
+
+
+</map>
+
+
+<div style="background: transparent none repeat scroll 0%; position: absolute; left: 0pt; top: 31px; -moz-background-clip: -moz-initial; -moz-background-origin: -moz-initial; -moz-background-inline-policy: -moz-initial;">
+   <img src="Hotel_files/competeBar.gif" alt="" usemap="#competeBar">
+</div>
+
+
+<div style="position: absolute; right: 0px; top: 31px;"><a href="http://www.topcoder.com/reg/?nrg=false"><img src="Hotel_files/update_my_profile.gif" alt="Update My Profile" style="display: block;"></a></div>
+
+
+<div style="margin: 0px 290px 0px 280px;" align="center">
+   <div id="outerLogo">
+      <div id="innerLogo">
+      <a href="http://www.topcoder.com/"><img src="Hotel_files/topcoder.gif" alt="TopCoder" style="display: block;"></a>
+      </div>
+   </div>
+</div>
+
+<div class="memberCountBox">
+Member Count: 118,956 - 
+
+
+August 4, 2007
+
+&nbsp;<a class="gMetal" href="javascript:tcTime()">[Get Time]</a>
+</div>
+
+<div class="topBar">
+    <div style="margin: 5px 0px 0px; float: right;">
+        
+            Hello,&nbsp;<a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=22690917" class="coderTextWhite">mak2000</a>
+            
+                | <a class="gMetal" href="http://www.topcoder.com/tc?module=Logout">Logout</a>
+            
+        
+    </div>
+</div>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody><tr>
+<td valign="top" width="180">
+    
+
+
+
+
+
+
+
+<script language="JavaScript" type="text/javascript" src="Hotel_files/arena.js"></script>
+
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function toggleMenu(menuTitle,menuID){
+   var menu = document.getElementById(menuID);
+   if(menu.style.display == 'block') menu.className = 'CLOSED';
+   else if(menu.className == 'OPEN' && menu.style.display != 'none') menu.className = 'CLOSED';
+   else {
+      menu.className = 'OPEN';
+   }
+   if(menuTitle.blur)menuTitle.blur();
+   if(menuTitle.className == 'exp') menuTitle.className = 'exp_ed';
+   else menuTitle.className = 'exp';
+   return;
+}
+function flipMenu(myMenuName){
+   var menuName = document.getElementById(myMenuName);
+   menuName.className = 'exp_ed';
+}
+
+// -->
+</script>
+
+<div style="padding: 0px;"><img src="Hotel_files/leftnav_top.gif" alt=""></div>
+<div id="navbar">
+    
+<ul>
+<li class="exp_ed"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_competitions')">Competitions</a>
+<ul id="m_competitions" class="OPEN">
+<li><a href="http://www.topcoder.com/tc">Home</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_competitor_stats')">The Tops</a>
+<ul id="m_competitor_stats">
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_top_rated_competitors')">Top Ranked</a>
+<ul id="m_top_rated_competitors">
+<li><a href="http://www.topcoder.com/tc?module=AlgoRank">Algorithm</a></li>
+<li><a href="http://www.topcoder.com/stat?c=top_designers">Design</a></li>
+<li><a href="http://www.topcoder.com/stat?c=top_developers">Development</a></li>
+<li><a href="http://www.topcoder.com/tc?module=HSRank">High School</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_recordbook')">Record Book</a>
+<ul id="m_recordbook">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=statistics&amp;d2=recordbook_home">Algorithm</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=compstats&amp;d2=comp_recordbook_home">Component</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_com')">Coder of the Month</a>
+<ul id="m_com">
+<li><a href="http://www.topcoder.com/tc?module=COMHistory&amp;achtid=5">Algorithm</a></li>
+<li><a href="http://www.topcoder.com/tc?module=COMHistory&amp;achtid=6">Design</a></li>
+<li><a href="http://www.topcoder.com/tc?module=COMHistory&amp;achtid=7">Development</a></li>
+</ul></li>
+</ul></li>
+<li class="exp_ed"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_algo_competitions')">Algorithm</a>
+<ul id="m_algo_competitions" class="OPEN">
+<li><a href="javascript:arena();">Launch Arena</a></li>
+<li class="exp_ed"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_algo_stats')">Statistics</a>
+<ul id="m_algo_stats" class="OPEN">
+<li><a href="http://www.topcoder.com/tc?module=MatchList">Match Archive</a></li>
+<li><a href="http://www.topcoder.com/stat?c=round_overview">Match Overviews</a></li>
+<li><a href="http://www.topcoder.com/tc?module=SrmDivisionWins">Match Winners</a></li>
+<li><a href="http://www.topcoder.com/stat?c=last_match">Match Results</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=match_editorials&amp;d2=archive">Match Editorials</a></li>
+<li class="highlight"><a href="http://www.topcoder.com/tc?module=ProblemArchive">Problem Archive</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ratid=1">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=dataFeed">Data Feeds</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_algo_support')">Support / FAQs</a>
+<ul id="m_algo_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=index">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=faqIndex">FAQs</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=sampleProblems">Sample Problems</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=ratings">Rating System</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=problemWriter&amp;node=algo_write">Write Problems</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=algo_get_paid">How to Get Paid</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=charity">Charity Donations</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_des_competitions')">Software Design</a>
+<ul id="m_des_competitions">
+<li><a href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=112">Active Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ContestStatus&amp;ph=112">Contest Status</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewReviewProjects&amp;ph=112">Review Opportunities</a></li>
+<li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_des_stats')">Statistics</a>
+<ul id="m_des_stats">
+<li><a href="http://www.topcoder.com/tc?module=CompList&amp;ph=112">Past Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ph=112">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desDataFeed">Data Feeds</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=ReviewBoard&amp;ph=112">Meet the Review Board</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_des_support')">Support / FAQs</a>
+<ul id="m_des_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desGettingStarted">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desDocumentation">Documentation</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desRatings">Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=desReliability">Reliability Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=des_get_paid">How to Get Paid</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_dev_competitions')">Software Development</a>
+<ul id="m_dev_competitions">
+<li><a href="http://www.topcoder.com/tc?module=ViewActiveContests&amp;ph=113">Active Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ContestStatus&amp;ph=113">Contest Status</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewReviewProjects&amp;ph=113">Review Opportunities</a></li>
+<li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_dev_stats')">Statistics</a>
+<ul id="m_dev_stats">
+<li><a href="http://www.topcoder.com/tc?module=CompList&amp;ph=113">Past Contests</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ph=113">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devDataFeed">Data Feeds</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=ReviewBoard&amp;ph=113">Meet the Review Board</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_dev_support')">Support / FAQs</a>
+<ul id="m_dev_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devGettingStarted">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devDocumentation">Documentation</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devRatings">Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=support&amp;d3=devReliability">Reliability Ratings</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=dev_get_paid">How to Get Paid</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_assembly_competitions')">Software Assembly</a>
+<ul id="m_assembly_competitions">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=overview">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewAssemblyActiveContests">Active Contests</a></li>
+<li><a href="http://software.topcoder.com/review">Submit &amp; Review</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_assembly_support')">Support / FAQs</a>
+<ul id="m_assembly_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=instructions">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=tutorial">Tutorial</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=assembly&amp;d3=documentation">Documentation</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=getPaid&amp;node=assem_get_paid">How to Get Paid</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_testing_competitions')">Software Testing</a>
+<ul id="m_testing_competitions">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=overview">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=activeContests">Active Contests</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_testing_support')">Support / FAQs</a>
+<ul id="m_testing_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=instructions">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=tutorial">Tutorial</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=dev&amp;d2=testing&amp;d3=documentation">Documentation</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_hs_competitions')">High School</a>
+<ul id="m_hs_competitions">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=home">Overview</a></li>
+<li><a href="javascript:arena();">Launch Arena</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_hs_stats')">Statistics</a>
+<ul id="m_hs_stats">
+<li><a href="http://www.topcoder.com/tc?module=HSRoundOverview">Match Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=HSRoundStatsTeam">Match Results (Team)</a></li>
+<li><a href="http://www.topcoder.com/tc?module=HSRoundStatsInd">Match Results (Indiv.)</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=match_editorials&amp;d3=archive">Match Editorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ColorChange&amp;ratid=2">Recent Color Changes</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=dataFeed">Data Feeds</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=sponsorship">Sponsorship</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_hs_support')">Support / FAQs</a>
+<ul id="m_hs_support">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=index">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=faqIndex">FAQs</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=sampleProblems">Sample Problems</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=hs&amp;d2=support&amp;d3=ratings">Rating System</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=problemWriter&amp;node=hs_write">Write Problems</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_long_contests')">Marathon Matches</a>
+<ul id="m_long_contests">
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewActiveContests">Active Contests</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewPractice&amp;rt=14">Practice</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=intel_overview">Intel Multi-Threading Competition Series</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewActiveContests&amp;rt=15">Intel Active Contests</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=ViewQueue">Queue Status</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=match_editorials&amp;d2=archive">Match Editorials</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_long_support')">Support / FAQs</a>
+<ul id="m_long_support">
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=instructions">How to Compete</a></li>
+<li><a href="http://www.topcoder.com/longcontest/?module=Static&amp;d1=support&amp;d2=ratings">Rating System</a></li>
+</ul></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_tournaments')">Tournaments</a>
+<ul id="m_tournaments">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tournaments&amp;d2=home">TopCoder</a></li>
+<li><a href="http://www.topcoder.com/pl/">Powered by TopCoder</a></li>
+<li><a href="http://www.topcoder.com/tc?module=CRPFStatic&amp;d1=crpf&amp;d2=crpf_overview">Charity</a></li>
+</ul></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=digital_run&amp;d2=description">The Digital Run</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_edu_content')">Educational Content</a>
+<ul id="m_edu_content">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=education&amp;d2=overview">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=alg_index">Algorithm Tutorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=comp_index">Component Tutorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=tutorials&amp;d2=mm_index">Marathon Tutorials</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=features&amp;d2=archive">Features</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=help&amp;d2=writeForTC">Write for TopCoder</a></li>
+</ul></li>
+</ul></li>
+<li><a href="http://forums.topcoder.com/">Forums</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=calendar&amp;d2=thisMonth">Event Calendar</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=pressroom&amp;d2=index">Press Room</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=media&amp;d2=tcchannel">TC Channel</a></li>
+<li><a href="http://www.topcoder.com/tc?&amp;module=SurveyList">Surveys</a></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_my_tc')">My TopCoder</a>
+<ul id="m_my_tc">
+<li><a href="http://www.topcoder.com/reg/?nrg=false">Update My Profile</a></li>
+<li><a href="http://www.topcoder.com/tc?module=ViewReferrals">Member Referrals</a></li>
+<li><a href="http://www.topcoder.com/PactsMemberServlet?module=AffidavitHistory">Affidavits</a></li>
+<li><a href="http://www.topcoder.com/tc?module=VisaSelection">Visa Letter Status</a></li>
+<li><a href="http://www.topcoder.com/PactsMemberServlet?module=AssignmentDocumentHistory">Assignment Documents</a></li>
+<li><a href="http://www.topcoder.com/PactsMemberServlet?module=PaymentHistory">Payments</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=card&amp;d2=description">Cards / Badges</a></li>
+</ul></li>
+<li class="exp"><a href="javascript:void(0)" onclick="Javascript:toggleMenu(this.parentNode,'m_about_tc')">About TopCoder</a>
+<ul id="m_about_tc">
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=index">Overview</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=contactus">Contact Us</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=whyjoin">Why Join TopCoder?</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=jobs">Working at TopCoder</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=management">Management Team</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=terms">Terms, Revisions</a></li>
+<li><a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=privacy">Privacy Policy</a></li>
+</ul></li></ul>
+
+    
+
+<div id="navbarSearch">
+<b>Member Search:</b>
+<form action="http://www.topcoder.com/tc" method="get" name="simpleSearchForm" class="noSpace" id="simpleSearchForm">
+   <input class="noSpace" name="module" value="SimpleSearch" type="hidden">
+   <input class="noSpace" name="ha" value="Handle:" size="12" maxlength="15" onfocus="javascript:
+         if (document.simpleSearchForm.ha.value=='Handle:')
+            document.simpleSearchForm.ha.value = '';" onblur="javascript:
+         if (document.simpleSearchForm.ha.value == '')
+            document.simpleSearchForm.ha.value = 'Handle:';" type="text">
+   <a class="gMetal" href="javascript:void document.simpleSearchForm.submit();">Go</a><br>
+   <a class="gMetal" href="http://www.topcoder.com/tc?module=ViewAdvanced">Advanced Search</a>
+</form>
+</div>
+</div>
+<div style="padding: 0px 0px 23px; float: left; clear: left;"><img src="Hotel_files/leftnav_bottom.gif" alt=""></div>
+
+
+    <div style="margin: 0px; float: left; clear: left; width: 170px;" align="center">
+        <img src="Hotel_files/brackets.png" alt="" style="margin-bottom: 23px;">
+    </div>
+
+</td>
+<td valign="top" width="10"><img src="Hotel_files/clear.gif" border="0" height="1" width="10"></td>
+<td class="bodyText" valign="top" width="100%"><img src="Hotel_files/clear.gif" border="0" height="1" vspace="5" width="240">
+<br>
+<!-- BEGIN BODY -->
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody><tr>
+        <td align="left" height="26" valign="bottom" width="11">
+            <img src="Hotel_files/steelblue_top_left1.gif" border="0" height="26" width="11"></td>
+        <td align="left" valign="bottom" width="180">
+            <img src="Hotel_files/header_statistics.gif" border="0" height="26" width="180"></td>
+        <td class="bodyTextBold" valign="middle" width="100%">
+            &nbsp;<span class="bodySubhead">&nbsp;&nbsp;Problem Archive&nbsp;&nbsp;</span>
+        </td>
+        <td align="right" valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="26" width="10"></td>
+    </tr>
+</tbody></table>
+<table bgcolor="#001b35" border="0" cellpadding="10" cellspacing="0" width="100%">
+<tbody><tr>
+<td valign="top" width="100%"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="240"><br>
+
+
+<form name="problemListForm" method="get">
+<input name="module" value="ProblemArchive" type="hidden">
+<input name="sr" value="" type="hidden">
+<input name="er" value="" type="hidden">
+<input name="sc" value="" type="hidden">
+<input name="sd" value="" type="hidden">
+
+<table bgcolor="#001b35" border="0" cellpadding="2" cellspacing="0" width="100%">
+    <tbody><tr>
+        <td background="Hotel_files/steel_blue_bg.gif" valign="middle" width="10">
+            <img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" align="left" background="Hotel_files/steel_blue_bg.gif"><span class="bodySubtitle">Search</span></td>
+    </tr>
+</tbody></table>
+
+<table bgcolor="#001b35" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+</tr>
+<tr>
+    <td class="statText" align="right">Class Name</td>
+    <td class="statText" align="left">
+        <input name="class" size="15" maxlength="32" onkeypress="submitEnter(event)" type="text">
+    </td>
+    <td class="statText" align="right">Category</td>
+    <td class="statText" align="left">
+        <select name="cat">
+<option value=""></option><option value="Advanced Math">Advanced Math</option>
+<option value="Brute Force">Brute Force</option>
+<option value="Dynamic Programming">Dynamic Programming</option>
+<option value="Encryption/Compression">Encryption/Compression</option>
+<option value="Geometry">Geometry</option>
+<option value="Graph Theory">Graph Theory</option>
+<option value="Greedy">Greedy</option>
+<option value="Math">Math</option>
+<option value="Recursion">Recursion</option>
+<option value="Search">Search</option>
+<option value="Simple Math">Simple Math</option>
+<option value="Simple Search, Iteration">Simple Search, Iteration</option>
+<option value="Simulation">Simulation</option>
+<option value="Sorting">Sorting</option>
+<option value="String Manipulation">String Manipulation</option>
+<option value="String Parsing">String Parsing</option>
+</select>
+
+    </td>
+</tr>
+<tr>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+</tr>
+
+<tr>
+    <td class="statText" align="right" width="25%">Division I Level</td>
+    <td class="statText" align="left" width="25%">
+        <select name="div1l">
+<option value=""></option><option value="1">Level One</option>
+<option value="2">Level Two</option>
+<option value="3">Level Three</option>
+</select>
+
+    </td>
+    <td class="statText" align="right" width="25%">Division II Level</td>
+    <td class="statText" align="left" width="25%">
+        <select name="div2l">
+<option value=""></option><option value="1">Level One</option>
+<option value="2">Level Two</option>
+<option value="3">Level Three</option>
+</select>
+
+    </td>
+</tr>
+
+<tr>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+</tr>
+<tr>
+    <td class="statText" align="right">Minimum Division I Success Rate</td>
+    <td class="statText" align="left">
+        <input name="mind1s" size="5" maxlength="5" onkeypress="submitEnter(event)" type="text">
+        %
+    </td>
+    <td class="statText" align="right">Minimum Division II Success Rate</td>
+    <td class="statText" align="left">
+        <input name="mind2s" size="5" maxlength="5" onkeypress="submitEnter(event)" type="text">
+        %
+    </td>
+</tr>
+<tr>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+</tr>
+<tr>
+    <td class="statText" align="right">Maximum Division I Success Rate</td>
+    <td class="statText" align="left">
+        <input name="maxd1s" size="5" maxlength="5" onkeypress="submitEnter(event)" type="text">
+        %
+    </td>
+    <td class="statText" align="right">Maximum Division II Success Rate</td>
+    <td class="statText" align="left">
+        <input name="maxd2s" size="5" maxlength="5" onkeypress="submitEnter(event)" type="text">
+        %
+    </td>
+</tr>
+<tr>
+    <td colspan="2" class="errorText" align="center">
+        
+    </td>
+    <td colspan="2" class="errorText" align="center">
+    </td>
+</tr>
+<tr>
+    <td class="statText" align="right">Writer:</td>
+    <td class="statText" align="left">
+        <input name="wr" size="15" maxlength="15" onkeypress="submitEnter(event)" type="text">
+    </td>
+    <td class="statText" align="right"></td>
+    <td class="statText" align="left"></td>
+</tr>
+
+
+<tr>
+    <td colspan="4" class="statText" align="center">
+        <a class="statText" href="javascript: document.problemListForm.submit();">Submit</a>
+    </td>
+</tr>
+</tbody></table><br><br>
+
+<table>
+
+</table><table bgcolor="#001b35" border="0" cellpadding="2" cellspacing="0" width="100%">
+<tbody><tr>
+    <td colspan="12" class="statText">&lt;&lt; prev
+        | <a href="javascript:next()" class="statText">next &gt;&gt;</a>
+    </td>
+</tr>
+<tr>
+    <td background="Hotel_files/steel_blue_bg.gif" valign="middle" width="10">
+        <img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    <td class="statText" background="Hotel_files/steel_blue_bg.gif" height="18" valign="middle" width="13%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=0&amp;sd=asc" class="statText"><b>Problem&nbsp;Name</b></a>
+    </td>
+    <td class="statText" align="left" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="15%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=1&amp;sd=asc" class="statText"><b>Contest</b></a>
+    </td>
+    <td class="statText" align="left" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="10%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=2&amp;sd=desc" class="statText"><b>Date</b></a>
+    </td>
+    <td class="statText" align="left" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="10%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=18&amp;sd=asc" class="statText"><b>Writer</b></a>
+    </td>
+    <td class="statText" align="left" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="20%">
+        <b>Categories</b>
+    </td>
+    <td class="statText" align="right" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="5%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=4&amp;sd=asc" class="statText"><b>Div.
+            1<br>Level</b></a></td>
+    <td class="statText" align="right" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="15%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=6&amp;sd=desc" class="statText"><b>Div.
+            1<br>Success Rate</b></a></td>
+    <td class="statText" align="right" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="10%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=5&amp;sd=asc" class="statText"><b>Div.
+            2<br>Level</b></a></td>
+    <td class="statText" align="right" background="Hotel_files/steel_blue_bg.gif" valign="middle" width="15%">
+        <a href="http://www.topcoder.com/tc?module=ProblemArchive&amp;sc=7&amp;sd=desc" class="statText"><b>Div.
+            2<br>Success Rate</b></a></td>
+    <td class="statText" background="Hotel_files/steel_blue_bg.gif" height="18" valign="middle" width="5%"></td>
+    <td background="Hotel_files/steel_blue_bg.gif" valign="top" width="10">
+        <img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+</tr>
+<tr>
+    <td colspan="12"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="1"></td>
+</tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7994" class="statText">
+                CoolNumber
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10774" class="statText">
+                TCHS SRM 36
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=11801002&amp;tab=alg" class="coderTextYellow">mateuszek</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Recursion, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            81.82%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10774&amp;pm=7994" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8064" class="statText">
+                CrazySequence
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10774" class="statText">
+                TCHS SRM 36
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=11801002&amp;tab=alg" class="coderTextYellow">mateuszek</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Math, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            41.94%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10774&amp;pm=8064" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8014" class="statText">
+                Election
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10773" class="statText">
+                SRM 361
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=8382018&amp;tab=alg" class="coderTextYellow">slex</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Greedy, Sorting
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            46.88%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10773&amp;pm=8014" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8009" class="statText">
+                ReverseDistance
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10773" class="statText">
+                SRM 361
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=8382018&amp;tab=alg" class="coderTextYellow">slex</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Greedy, Math, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            15.45%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10773&amp;pm=8009" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8019" class="statText">
+                SearchBox
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10773" class="statText">
+                SRM 361
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=8382018&amp;tab=alg" class="coderTextYellow">slex</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Search, Iteration, String Manipulation
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            25.15%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10773&amp;pm=8019" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8059" class="statText">
+                VegetableField
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10774" class="statText">
+                TCHS SRM 36
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=11801002&amp;tab=alg" class="coderTextYellow">mateuszek</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            84.62%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10774&amp;pm=8059" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8025" class="statText">
+                WeighingScale
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10773" class="statText">
+                SRM 361
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=8382018&amp;tab=alg" class="coderTextYellow">slex</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Graph Theory, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            36.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10773&amp;pm=8025" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8010" class="statText">
+                WhiteHats
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10773" class="statText">
+                SRM 361
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            08.01.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=8382018&amp;tab=alg" class="coderTextYellow">slex</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Simple Math, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            79.83%
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            42.51%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10773&amp;pm=8010" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8027" class="statText">
+                AzimuthMonitoring
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10772" class="statText">
+                SRM 360
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.24.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=21971539&amp;tab=alg" class="coderTextRed">darnley</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Math, String Manipulation
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            72.24%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10772&amp;pm=8027" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7877" class="statText">
+                ConvexArray
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10772" class="statText">
+                SRM 360
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.24.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=21971539&amp;tab=alg" class="coderTextRed">darnley</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Geometry, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            53.57%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10772&amp;pm=7877" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7876" class="statText">
+                PrinceOfPersia
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10772" class="statText">
+                SRM 360
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.24.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=21971539&amp;tab=alg" class="coderTextRed">darnley</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Graph Theory, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            45.14%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10772&amp;pm=7876" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7875" class="statText">
+                SumOfSelectedCells
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10772" class="statText">
+                SRM 360
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.24.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=21971539&amp;tab=alg" class="coderTextRed">darnley</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Math
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            39.20%
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            9.87%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10772&amp;pm=7875" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8026" class="statText">
+                TakeSubstringGame
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10772" class="statText">
+                SRM 360
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.24.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=21971539&amp;tab=alg" class="coderTextRed">darnley</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Dynamic Programming, Simple Math
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            35.19%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10772&amp;pm=8026" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7854" class="statText">
+                BubbleSortIterations
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10770" class="statText">
+                SRM 359
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=251074&amp;tab=alg" class="coderTextRed">bmerry</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Sorting
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            85.47%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10770&amp;pm=7854" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7707" class="statText">
+                CricketScores
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10770" class="statText">
+                SRM 359
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=251074&amp;tab=alg" class="coderTextRed">bmerry</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            94.64%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10770&amp;pm=7707" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7701" class="statText">
+                CropCircles
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10770" class="statText">
+                SRM 359
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=251074&amp;tab=alg" class="coderTextRed">bmerry</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Geometry
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            36.73%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10770&amp;pm=7701" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7702" class="statText">
+                DriveFailures
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10770" class="statText">
+                SRM 359
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=251074&amp;tab=alg" class="coderTextRed">bmerry</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            98.84%
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            89.63%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10770&amp;pm=7702" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8037" class="statText">
+                NamesList
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10771" class="statText">
+                TCHS SRM 35
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10407399&amp;tab=alg" class="coderTextYellow">timmac</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            71.43%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10771&amp;pm=8037" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8036" class="statText">
+                PaperGame
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10771" class="statText">
+                TCHS SRM 35
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10407399&amp;tab=alg" class="coderTextYellow">timmac</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Dynamic Programming, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            62.96%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10771&amp;pm=8036" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8039" class="statText">
+                PaperScraps
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10771" class="statText">
+                TCHS SRM 35
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10407399&amp;tab=alg" class="coderTextYellow">timmac</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            0.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10771&amp;pm=8039" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7862" class="statText">
+                UTF8Decode
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10770" class="statText">
+                SRM 359
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.21.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=251074&amp;tab=alg" class="coderTextRed">bmerry</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Encryption/Compression, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            20.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10770&amp;pm=7862" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7845" class="statText">
+                BalanceScale
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10768" class="statText">
+                SRM 358
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10256411&amp;tab=alg" class="coderTextYellow">icanadi</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Math
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            44.02%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10768&amp;pm=7845" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7716" class="statText">
+                BrokenButtons
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10768" class="statText">
+                SRM 358
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10256411&amp;tab=alg" class="coderTextYellow">icanadi</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Simple Math
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            47.80%
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            8.43%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10768&amp;pm=7716" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7694" class="statText">
+                CyclicWords
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10768" class="statText">
+                SRM 358
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10256411&amp;tab=alg" class="coderTextYellow">icanadi</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Search, Iteration, String Manipulation
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            78.90%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10768&amp;pm=7694" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7831" class="statText">
+                ExploringHoneycombs
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10769" class="statText">
+                TCHS SRM 34
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=15635590&amp;tab=alg" class="coderTextYellow">Nickolas</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Graph Theory
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            37.50%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10769&amp;pm=7831" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7955" class="statText">
+                NumbersGame
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10769" class="statText">
+                TCHS SRM 34
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=15635590&amp;tab=alg" class="coderTextYellow">Nickolas</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Sorting
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            88.14%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10769&amp;pm=7955" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7594" class="statText">
+                QuoteContest
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10769" class="statText">
+                TCHS SRM 34
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=15635590&amp;tab=alg" class="coderTextYellow">Nickolas</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Search, Iteration, String Parsing
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            98.41%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10769&amp;pm=7594" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7705" class="statText">
+                SameDigits
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10768" class="statText">
+                SRM 358
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10256411&amp;tab=alg" class="coderTextYellow">icanadi</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Dynamic Programming
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            0.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10768&amp;pm=7705" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7834" class="statText">
+                SharksDinner
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10768" class="statText">
+                SRM 358
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.17.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10256411&amp;tab=alg" class="coderTextYellow">icanadi</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Graph Theory
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            36.96%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10768&amp;pm=7834" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7867" class="statText">
+                AlmostPrime
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10767" class="statText">
+                TCHS SRM 33
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=11801002&amp;tab=alg" class="coderTextYellow">mateuszek</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Math, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            26.67%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10767&amp;pm=7867" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=8017" class="statText">
+                CastleGuards
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10767" class="statText">
+                TCHS SRM 33
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=11801002&amp;tab=alg" class="coderTextYellow">mateuszek</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            83.02%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10767&amp;pm=8017" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=4593" class="statText">
+                ChipArea
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10766" class="statText">
+                SRM 357
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=159544&amp;tab=alg" class="coderTextYellow">dgoodman</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Geometry, Recursion, Sorting
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            50.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10766&amp;pm=4593" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7968" class="statText">
+                DogAndRabbit
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/tc?module=HSRoundOverview&amp;rd=10767" class="statText">
+                TCHS SRM 33
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=11801002&amp;tab=alg" class="coderTextYellow">mateuszek</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Math
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            1.96%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10767&amp;pm=7968" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=6254" class="statText">
+                Hotel
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10766" class="statText">
+                SRM 357
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=158447&amp;tab=alg" class="coderTextYellow">ValD</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            75.51%
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            32.68%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10766&amp;pm=6254" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=2432" class="statText">
+                MnemonicMemory
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10766" class="statText">
+                SRM 357
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=158447&amp;tab=alg" class="coderTextYellow">ValD</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Simple Search, Iteration, String Parsing
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            92.36%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10766&amp;pm=2432" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=6406" class="statText">
+                WebsiteRank
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10766" class="statText">
+                SRM 357
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.12.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=158447&amp;tab=alg" class="coderTextYellow">ValD</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Recursion, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            22.39%
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            6.98%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10766&amp;pm=6406" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7901" class="statText">
+                AverageProblem
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10765" class="statText">
+                SRM 356
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.02.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10323773&amp;tab=alg" class="coderTextYellow">Pawa</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Simple Math, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            39.58%
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            2.46%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10765&amp;pm=7901" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7353" class="statText">
+                EscapeTheJail
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10765" class="statText">
+                SRM 356
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.02.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10323773&amp;tab=alg" class="coderTextYellow">Pawa</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Math
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            11.96%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10765&amp;pm=7353" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=6608" class="statText">
+                MarriageProblemRevised
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10765" class="statText">
+                SRM 356
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.02.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10323773&amp;tab=alg" class="coderTextYellow">Pawa</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Graph Theory, Math
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            31.76%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10765&amp;pm=6608" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7921" class="statText">
+                RoadReconstruction
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10765" class="statText">
+                SRM 356
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.02.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10323773&amp;tab=alg" class="coderTextYellow">Pawa</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Graph Theory, Sorting, String Parsing
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            42.86%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10765&amp;pm=7921" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7929" class="statText">
+                SMSLanguage
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10765" class="statText">
+                SRM 356
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            07.02.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=10323773&amp;tab=alg" class="coderTextYellow">Pawa</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            String Parsing
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            62.44%
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10765&amp;pm=7929" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7721" class="statText">
+                DayTrader
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10843" class="statText">
+                TCO07 Finals
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.29.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=287269&amp;tab=alg" class="coderTextYellow">legakis</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Simple Math
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            100.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10843&amp;pm=7721" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7848" class="statText">
+                Rafting
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10843" class="statText">
+                TCO07 Finals
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.29.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=308953&amp;tab=alg" class="coderTextRed">Mike Mirzayanov</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Geometry
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            0.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10843&amp;pm=7848" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7849" class="statText">
+                RepeatingFreeStrings
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10843" class="statText">
+                TCO07 Finals
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.29.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=308953&amp;tab=alg" class="coderTextRed">Mike Mirzayanov</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Advanced Math
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            0.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10843&amp;pm=7849" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7614" class="statText">
+                BusyTime
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10841" class="statText">
+                TCO07 Semi 3
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.28.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=159544&amp;tab=alg" class="coderTextYellow">dgoodman</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Greedy, Simple Search, Iteration
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            58.33%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10841&amp;pm=7614" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=6778" class="statText">
+                CauchyProduct
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10842" class="statText">
+                TCO07 Wildcard
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.28.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=309138" class="coderTextOrange">AdminBrett</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Math
+        </td>
+        <td class="statText" align="right" height="13">
+            1
+        </td>
+        <td class="statText" align="right" height="13">
+            75.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10842&amp;pm=6778" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7880" class="statText">
+                Inc
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10841" class="statText">
+                TCO07 Semi 3
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.28.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=287269&amp;tab=alg" class="coderTextYellow">legakis</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Dynamic Programming
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            66.67%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10841&amp;pm=7880" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=2942" class="statText">
+                PaperThickness
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10842" class="statText">
+                TCO07 Wildcard
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.28.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=309138" class="coderTextOrange">AdminBrett</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Brute Force, Geometry
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            25.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10842&amp;pm=2942" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7883" class="statText">
+                SkipList
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10842" class="statText">
+                TCO07 Wildcard
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.28.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=309138" class="coderTextOrange">AdminBrett</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Dynamic Programming
+        </td>
+        <td class="statText" align="right" height="13">
+            3
+        </td>
+        <td class="statText" align="right" height="13">
+            0.00%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10842&amp;pm=7883" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+    <tr>
+        <td valign="middle" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+        <td class="statText" height="13">
+            <a href="http://www.topcoder.com/stat?c=problem_statement&amp;pm=7621" class="statText">
+                ToolingUp
+            </a></td>
+        <td class="statText" align="left" height="13" nowrap="on">
+            
+            <a href="http://www.topcoder.com/stat?c=round_overview&amp;rd=10841" class="statText">
+                TCO07 Semi 3
+            </a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            06.28.2007
+        </td>
+        <td class="statText" align="left" height="13">
+            
+            <a href="http://www.topcoder.com/tc?module=MemberProfile&amp;cr=159544&amp;tab=alg" class="coderTextYellow">dgoodman</a>
+            
+        </td>
+        <td class="statText" align="left" height="13">
+            Math, Search
+        </td>
+        <td class="statText" align="right" height="13">
+            2
+        </td>
+        <td class="statText" align="right" height="13">
+            16.67%
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            
+        </td>
+        <td class="statText" align="right" height="13">
+            <a href="http://www.topcoder.com/tc?module=ProblemDetail&amp;rd=10841&amp;pm=7621" class="statText">details</a>
+        </td>
+        <td valign="top" width="10"><img src="Hotel_files/clear.gif" alt="" border="0" height="1" width="10"></td>
+    </tr>
+
+<tr>
+    <td colspan="12"><img src="Hotel_files/clear.gif" alt="" border="0" height="5" width="1"></td>
+</tr>
+<tr>
+    <td class="statText" colspan="11" align="center" background="Hotel_files/steel_blue_bg.gif" height="16">
+    </td>
+</tr>
+<tr>
+    <td colspan="12" class="statText">&lt;&lt; prev
+        | <a href="javascript:next()" class="statText">next &gt;&gt;</a>
+    </td>
+</tr>
+
+<tr>
+    <td colspan="12" valign="middle"><img src="Hotel_files/clear.gif" alt="" border="0" height="10" width="1"></td>
+</tr>
+<tr>
+    <td colspan="12" class="statText" align="center">
+    </td>
+</tr>
+<tr>
+    <td colspan="12" valign="middle"><img src="Hotel_files/clear.gif" alt="" border="0" height="10" width="1"></td>
+</tr>
+</tbody></table>
+</form>
+</td>
+</tr>
+<tr>
+    <td bgcolor="#001b35" valign="top" width="100%"><img src="Hotel_files/clear.gif" alt="" border="0" height="10" width="1">
+    </td>
+</tr>
+</tbody></table>
+
+<p><br></p>
+
+<!-- END BODY -->
+</td>
+<td width="10"><img src="Hotel_files/clear.gif" border="0" height="1" width="10"></td>
+<td valign="top" width="180"><img src="Hotel_files/clear.gif" border="0" height="1" width="180">
+    
+
+
+
+<script type="text/javascript" language="javascript">
+
+</script>
+
+
+
+<div class="rightColContent">
+    <br><br>
+</div>
+
+
+</td>
+<!-- Gutter -->
+<td width="10"><img src="Hotel_files/clear.gif" border="0" height="1" width="10"></td>
+<!-- Gutter Ends -->
+</tr>
+</tbody></table>
+
+
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tbody>
+    <tr>
+        <td class="footer" width="100%">
+            <a href="http://www.topcoder.com/" class="footerLinks">Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=index" class="footerLinks">About TopCoder</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=pressroom&amp;d2=index" class="footerLinks">Press Room</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=contactus" class="footerLinks">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=privacy" class="footerLinks">Privacy</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/tc?module=Static&amp;d1=about&amp;d2=terms" class="footerLinks">Terms</a>
+            <br>
+            <a href="http://www.topcoder.com/tc" class="footerLinks">Developer Center</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="http://www.topcoder.com/corp/?module=Static&amp;d1=corp&amp;d2=index" class="footerLinks">Corporate Services</a>        </td>
+    </tr>
+    <tr><td class="copyright" width="100%">Copyright © 2001-2007, TopCoder, Inc. All rights reserved.</td></tr>
+</tbody>
+</table>
+
+</body></html>
