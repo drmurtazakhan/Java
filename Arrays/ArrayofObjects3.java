@@ -1,29 +1,47 @@
-class People
-{	private String name;
-	public People(String n)
-	{	name = n;
+// compile: javac Arrays/ArrayofObjects3.java
+// run: java Arrays.ArrayofObjects3
+package Arrays;
+
+class People {
+	private String name;
+
+	// Constructor to initialize the name
+	public People(String name) {
+		this.name = name;
 	}
-	public static void m1(People[] pp)
-	{	for (int i=0; i<(pp.length-1)/2 ; i++)
-		{		People d= pp[i];
-    			pp[i]=pp[pp.length-i-1];
-    			pp[pp.length-i-1]=d;    		
-    	}
+
+	// Reverses the order of elements in an array of People objects in place
+	public static void reverseArray(People[] people) {
+		for (int i = 0; i < (people.length - 1) / 2; i++) {
+			People temp = people[i]; // Temporarily store the current element
+			people[i] = people[people.length - i - 1]; // Move the symmetric element from the end to the front
+			people[people.length - i - 1] = temp; // Place the temporary element at the end
+		}
 	}
-	public String toString()
-	{		return name;
+
+	// Returns the name when the object is printed
+	@Override
+	public String toString() {
+		return name;
 	}
 }
-public class ArrayofObjects3
-{   public static void main(String[ ] args)
-    {  People[] p = new People[5];
-    	p[0]= new People("K");
-    	p[1]= new People("H");
-    	p[2]= new People("N");
-    	p[3]= new People("M");
-    	p[4]= new People("A");
-    	People.m1(p);
-    	for (int i=0; i<p.length ; i++)
-    	System.out.println(p[i]);    	
-    }
+
+public class ArrayofObjects3 {
+	public static void main(String[] args) {
+		// Create an array to hold 5 People objects
+		People[] peopleArray = new People[5];
+		peopleArray[0] = new People("K");
+		peopleArray[1] = new People("H");
+		peopleArray[2] = new People("N");
+		peopleArray[3] = new People("M");
+		peopleArray[4] = new People("A");
+
+		// Reverse the array order using the helper method
+		People.reverseArray(peopleArray);
+
+		// Print each element from the reversed array
+		for (int i = 0; i < peopleArray.length; i++) {
+			System.out.println(peopleArray[i]);
+		}
+	}
 }
